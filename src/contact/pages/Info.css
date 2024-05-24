@@ -1,0 +1,25 @@
+aside {
+    background-color: var(--purple-200);
+    padding: 2rem;
+    border-radius: 30px;
+    height: 60vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    border-radius: 20px;
+    border: 2px solid var(--purple-200);
+    position: relative;
+    margin-top: -8rem;
+}
+
+.profession {
+    font-weight: 700;
+    padding: 0.1rem;
+    color: var(--purple-800);
+    border-radius: 10px;
+    background-color: var(--purple-300);
+    margin-top: -5%;
+}

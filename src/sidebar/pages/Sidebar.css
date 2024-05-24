@@ -1,0 +1,10 @@
+nav {
+    background-color: var(--purple-200);
+    padding: 2rem;
+    border-radius: 30px;
+    height: 50vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
