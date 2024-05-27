@@ -9,14 +9,7 @@ const Card = props => {
     return (
         <div className="card">
             <div className="media-container">
-                {props.mediaType === 'video' ? (
-                    <video controls>
-                        <source src={props.media} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                ) : (
-                    <img src={props.media} alt="profile" />
-                )}
+                <img src={props.media} alt="profile" />
             </div>
             <div className="details">
                 <label>{props.title}</label>

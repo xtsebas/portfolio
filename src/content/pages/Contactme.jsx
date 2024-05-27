@@ -1,16 +1,11 @@
 import React from "react";
 
 import './Principal.css';
-import NavBar from "../components/NavBar/NavBar";
+import Form from "../components/form/Form";
 
 const Contactme = props => {
     return (
-        <article>
-            <h1>Contactme</h1>
-            <p>
-                Contactme and responsive Info
-            </p>
-        </article>
+        <Form/>
     );
 };
 

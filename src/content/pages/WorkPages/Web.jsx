@@ -2,7 +2,8 @@ import React from "react";
 
 import NavBar from "../../components/NavBar/NavBar";
 import Card from "../../../shared/Cards/Card";
-import profile from "../../../assets/profile.jpg";
+import calculator from "../../../assets/calculator.gif";
+import animeBlog from "../../../assets/animeblog.gif";
 import "./General.css";
 
 const Web = props => {
@@ -11,7 +12,7 @@ const Web = props => {
             <NavBar />
             <div className="Cards">
                 <Card 
-                    media={profile} 
+                    media={animeBlog}
                     title={'Blog Anime'} 
                     description={'Full-stack blog built with React, Node.js, Vite, and JavaScript, featuring a robust API for seamless database connectivity'}
                     tech={'React, Node.js, Vite, JavaScript, CSS, HTML, MariaDB'} 
@@ -21,7 +22,7 @@ const Web = props => {
                     buttonRep={'Visit Repository'}
                 />
                 <Card 
-                    media={profile} 
+                    media={calculator} 
                     title={'Calculator'} 
                     description={'Next.js calculator app featuring responsive design and comprehensive unit testing for robust functionality'}
                     tech={'Next.js, JavaScript, CSS, HTML, Jest, React Testing Library'} 

@@ -7,7 +7,7 @@ const NavBar = props => {
     console.log(props.title, 'aaa');
     return (
         <nav className="navbar"> 
-                <h2>{props.title}</h2>
+                <h2>Portfolio</h2>
             <ul>
                 <li>
                     <Link to="/Work/Web" className={location.pathname === "/Work" || location.pathname === "/Work/Web" ? "active" : ""}>Web</Link>
