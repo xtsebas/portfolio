@@ -1,7 +1,7 @@
 import React from "react";
 
 import './Principal.css';
-import NavBar from "./NavBar";
+import NavBar from "../components/NavBar/NavBar";
 
 const Contactme = props => {
     return (

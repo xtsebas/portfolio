@@ -1,16 +1,23 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useState } from "react";
 
 import './Principal.css';
-import NavBar from "./NavBar";
-import Web from "./WorkPages/Web";
-import Repositories from "./WorkPages/Repositories";
-import Design from "./WorkPages/Design";
+import NavBar from "../components/NavBar/NavBar";
 
 const Works = props => {
+    const [title, setTitle] = useState("");
+
+    if (location.pathname === "/Work" || location.pathname === "/Work/Web") {
+        setTitle("Web");
+    } else if (location.pathname === "/Work/Repositories") {
+        setTitle("Repositories");
+    } else if (location.pathname === "/Work/Design") {
+        setTitle("Design");
+    }
+
     return (
         <article>
-            <NavBar />
+            <NavBar title={title} />
         </article>
     );
 };

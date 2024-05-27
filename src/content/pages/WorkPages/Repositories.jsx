@@ -1,6 +1,6 @@
 import react from "react";
 
-import NavBar from "../NavBar";
+import NavBar from "../../components/NavBar/NavBar";
 
 const Repositories = props => {
     return (

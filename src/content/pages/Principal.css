@@ -2,9 +2,8 @@ article {
     background-color: var(--purple-200);
     padding: 2rem;
     border-radius: 30px;
-    height: 50vh;
+    height: 85vh;
     width: 50vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
 }

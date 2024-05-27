@@ -1,23 +1,40 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faFileAlt, faCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import './Sidebar.css';
 
 const Sidebar = () => {
+    const location = useLocation();
+
     return (
-        <nav>
+        <nav className="sidebar">
             <ul>
+                <li><h2>Xtsebas</h2></li>
                 <li>
-                    <Link to="/">About me</Link>
+                    <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+                        <FontAwesomeIcon icon={faUser} style={{ marginRight: '10px' }} />
+                        About me
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/Resume">Resume</Link>
+                    <Link to="/Resume" className={location.pathname === "/Resume" ? "active" : ""}>
+                        <FontAwesomeIcon icon={faFileAlt} style={{marginRight: '10px'}} />
+                        Resume
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/Work">Works</Link>
+                    <Link to="/Work" className={location.pathname.startsWith("/Work") ? "active" : ""}>
+                        <FontAwesomeIcon icon={faCode} style={{marginRight: '10px'}} />
+                        Works
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/Contactme">Contact me</Link>
+                    <Link to="/Contactme" className={location.pathname === "/Contactme" ? "active" : ""}>
+                        <FontAwesomeIcon icon={faEnvelope} style={{marginRight: '10px'}} />
+                        Contact me
+                    </Link>
                 </li>
             </ul>
         </nav>
