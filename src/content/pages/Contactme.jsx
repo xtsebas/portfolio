@@ -5,7 +5,7 @@ import Form from "../components/form/Form";
 
 const Contactme = props => {
     return (
-        <Form/>
+        <Form />
     );
 };
 

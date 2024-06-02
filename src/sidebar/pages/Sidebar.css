@@ -3,7 +3,7 @@
     padding: 2rem;
     padding-left: 5%;
     border-radius: 30px;
-    height: 50vh;
+    height: 60vh;
     width: 15vw;
     display: flex;
     flex-direction: column;
@@ -54,4 +54,25 @@
     color: var(--purple-800);
     border-radius: 15px;
     transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px){
+    .sidebar {
+        position: sticky;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        width: 75vw;
+    }
+
+    .sidebar ul {
+        position: sticky;
+        display: flex;
+        flex-direction: row;
+        margin-left: 0%;
+    }
+
+    .sidebar a {
+        font-size: 0.66rem;
+    }
 }

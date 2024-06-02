@@ -6,7 +6,7 @@ import smartyou from "../../../assets/smartyou.gif";
 
 const Design = props => {
     return (
-        <article>
+        <article className="article">
             <NavBar />
             <div className="Cards">
                 <Card

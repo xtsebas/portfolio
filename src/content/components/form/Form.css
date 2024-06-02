@@ -45,7 +45,7 @@
     background-image: linear-gradient(163deg, var(--purple-800) 0%, var(--purple-800) 100%);
     border-radius: 22px;
     transition: all 0.3s;
-    width: 50vw;
+    width: 54.4vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,4 +65,15 @@
   .input-field::placeholder {
     color: white;
     opacity: 1; 
+}
+
+
+@media screen and (max-width: 768px){
+  .form-card1 {
+    width: 86vw;
+  }
+
+  .form-card2 {
+    width: 80vw;
+  }
 }

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import './NavBar.css';
 
 const NavBar = props => {
-    console.log(props.title, 'aaa');
     return (
         <nav className="navbar"> 
                 <h2>Portfolio</h2>

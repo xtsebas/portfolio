@@ -1,12 +1,28 @@
 .article {
     display: flex;
     flex-direction: column;
-    align-items: space-around;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .Cards {
     margin-top: 5%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px; 
+}
+
+.article::-webkit-scrollbar {
+    width: 6px; 
+}
+
+.article::-webkit-scrollbar-track {
+    background: var(--purple-950);
+    border-radius: 50px;
+}
+
+.article::-webkit-scrollbar-thumb {
+    background-color: var(--purple-500); 
+    border-radius: 3px;
+}
+
+.article::-webkit-scrollbar-thumb:hover {
+    background-color: var(--purple-700) 
 }

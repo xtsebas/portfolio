@@ -197,3 +197,36 @@ img {
     color: #ccc;
     padding-top: 5px;
 }
+
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    aside {
+        height: auto;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    img {
+        margin-top: 0;
+        width: 80px;
+        height: 80px;
+    }
+
+    .profession {
+        margin-top: 0;
+    }
+
+    .tooltip-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .details-row Button {
+        align-self: center;
+        margin-top: 1rem;
+    }
+}

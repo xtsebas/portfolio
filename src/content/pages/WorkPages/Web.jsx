@@ -19,7 +19,7 @@ const Web = props => {
                     toWeb={'https://663ab7948680e97bea0bbf34--ephemeral-dieffenbachia-a772c8.netlify.app/#/login'}
                     buttonWeb={'Visit Site'}
                     toRep={'https://github.com/xtsebas/Blog'}
-                    buttonRep={'Visit Repository'}
+                    buttonRep={'Source Code'}
                 />
                 <Card 
                     media={calculator} 
@@ -29,7 +29,7 @@ const Web = props => {
                     toWeb={'https://calculatortesting74.netlify.app/'}
                     buttonWeb={'Visit Site'}
                     toRep={'https://github.com/xtsebas/calculator-testing'}
-                    buttonRep={'Visit Repository'}
+                    buttonRep={'Source Code'}
                 />
                 
             </div>

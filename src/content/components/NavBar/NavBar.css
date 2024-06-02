@@ -47,3 +47,20 @@
     font-weight: bold;
     float: left;
 }
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .navbar h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+        float: none;
+    }
+    
+}

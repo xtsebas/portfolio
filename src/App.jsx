@@ -11,26 +11,26 @@ import Repositories from './content/pages/WorkPages/Repositories';
 import Design from './content/pages/WorkPages/Design';
 import './App.css'
 
-function App() {
-  return (
-    <>
-      <Info />
-      <Router>
-        <div>
-          <Routes>
-            <Route path="/Contactme" element={<Contactme />} />
-            <Route path="/Resume" element={<Resume />} />
-            <Route path="/Work" element={<Web />} />
-            <Route path="/" element={<Aboutme />} />
-            <Route path="/Work/Web" element={<Web />} />
-            <Route path="/Work/Repositories" element={<Repositories />} />
-            <Route path="/Work/Design" element={<Design />} />
-          </Routes>
-        </div>
-        <Sidebar />
-      </Router>
-    </>
-  )
+  function App() {
+    return (
+      <>
+        <Info />
+        <Router>
+          <div className="router-container">
+            <Routes>
+              <Route path="/Contactme" element={<Contactme />} />
+              <Route path="/Resume" element={<Resume />} />
+              <Route path="/Work" element={<Web />} />
+              <Route path="/" element={<Aboutme />} />
+              <Route path="/Work/Web" element={<Web />} />
+              <Route path="/Work/Repositories" element={<Repositories />} />
+              <Route path="/Work/Design" element={<Design />} />
+            </Routes>
+          </div>
+          <Sidebar />
+        </Router>
+      </>
+    )
 }
 
 export default App;

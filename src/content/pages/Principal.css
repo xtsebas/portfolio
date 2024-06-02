@@ -2,8 +2,82 @@ article {
     background-color: var(--purple-200);
     padding: 2rem;
     border-radius: 30px;
-    height: 85vh;
+    height: 60vh;
     width: 50vw;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+article::-webkit-scrollbar-track {
+    background: var(--purple-950);
+    border-radius: 50px;
+}
+
+article::-webkit-scrollbar-thumb {
+    background-color: var(--purple-500); 
+    border-radius: 3px;
+}
+
+article::-webkit-scrollbar-thumb:hover {
+    background-color: var(--purple-700) 
+}
+
+.hobbies,
+.ido {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: -1rem;
+}
+
+.hobbies h2,
+.ido h2{
+    font-weight: 500;
+    color: var(--purple-700);
+    text-align: start;
+    grid-column: span 2; 
+}
+
+.experience {
+    display: grid;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    justify-items: center; 
+}
+
+.skills h2 {
+    grid-column: span 2; 
+}
+
+
+@media screen and (max-width: 768px) {
+    article {
+        width: 70vw;
+    }
+
+    .hobbies,
+    .ido {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto; 
+        margin-left: -14%;
+    }
+
+    .hobbies h2,
+    .ido h2 {
+        grid-column: span 1; 
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    .skills {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto; 
+        margin-left: -14%;
+    }
+    
 }
