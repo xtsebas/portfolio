@@ -7,6 +7,8 @@ import animeBlog from "../../../assets/animeblog.gif";
 import "./General.css";
 
 const Web = props => {
+    
+
     return (
         <article className="article">
             <NavBar />
