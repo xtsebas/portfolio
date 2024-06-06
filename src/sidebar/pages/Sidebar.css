@@ -73,6 +73,11 @@
     }
 
     .sidebar a {
-        font-size: 0.66rem;
+        font-size: 1rem;
+        margin-left: 5%;
+    }
+
+    .sidebar-text {
+        display: none;
     }
 }

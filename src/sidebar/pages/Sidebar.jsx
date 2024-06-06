@@ -15,25 +15,25 @@ const Sidebar = () => {
                 <li>
                     <Link to="/" className={location.pathname === "/" ? "active" : ""}>
                         <FontAwesomeIcon icon={faUser} style={{ marginRight: '10px' }} />
-                        About me
+                        <span className="sidebar-text">About Me</span>
                     </Link>
                 </li>
                 <li>
                     <Link to="/Resume" className={location.pathname === "/Resume" ? "active" : ""}>
                         <FontAwesomeIcon icon={faFileAlt} style={{marginRight: '10px'}} />
-                        Resume
+                        <span className="sidebar-text">Resume</span>
                     </Link>
                 </li>
                 <li>
                     <Link to="/Work" className={location.pathname.startsWith("/Work") ? "active" : ""}>
                         <FontAwesomeIcon icon={faCode} style={{marginRight: '10px'}} />
-                        Works
+                        <span className="sidebar-text">Works</span>
                     </Link>
                 </li>
                 <li>
                     <Link to="/Contactme" className={location.pathname === "/Contactme" ? "active" : ""}>
                         <FontAwesomeIcon icon={faEnvelope} style={{marginRight: '10px'}} />
-                        Contact me
+                        <span className="sidebar-text">Contact Me</span>
                     </Link>
                 </li>
             </ul>

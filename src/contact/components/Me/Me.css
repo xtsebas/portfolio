@@ -1,0 +1,49 @@
+img {
+    border-radius: 20px;
+    border: 2px solid var(--purple-200);
+    position: relative;
+    margin-top: -8rem;
+}
+
+.profession {
+    font-weight: 700;
+    padding: 0.1rem;
+    color: var(--purple-800);
+    border-radius: 10px;
+    background-color: var(--purple-300);
+    margin-top: -5%;
+    margin-bottom: 0%;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    0% { border-color: transparent; }
+    50% { border-color: black; }
+    100% { border-color: transparent; }
+  }
+
+  .profession {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation:
+      typing 4s steps(40, end) forwards,
+      blink 0.75s step-end infinite;
+   }
+   
+
+@media (max-width: 768px) {
+    img {
+        margin-top: 0;
+        width: 80px;
+        height: 80px;
+    }
+
+    .profession {
+        margin-top: 0;
+    }
+}

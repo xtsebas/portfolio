@@ -20,8 +20,36 @@ const Resume = props => {
             </div>
             <div className="skills">
                 <Skills
-                    title = "Technologies"
-                    skills = {["Python", "Java", "HTML", "CSS", "JavaScript", "Android Studio", "SQL", "PostgreSQL", "MySQL", "React", "Node.js", "Laravel", "Bootstrap", "jQuery", "Kotlin", "Express.js", "Vite", "PHP", "Next.js"]}
+                    title="Frontend"
+                    skills={["HTML", "CSS", "JavaScript", "jQuery"]}
+                />
+                <Skills
+                    title="Backend"
+                    skills={["Python", "Java", "PHP"]}
+                />
+                <Skills
+                    title="DataBases"
+                    skills={["SQL", "PostgreSQL", "MySQL"]}
+                />
+                <Skills
+                    title="Server Side"
+                    skills={["Node.js", "Express.js"]}
+                />
+                <Skills
+                    title="Frameworks"
+                    skills={["React", "Laravel", "Bootstrap", "Next.js", "Vite"]}
+                />
+                <Skills
+                    title="Mobile"
+                    skills={["Android Studio", "Kotlin"]}
+                />
+                <Skills
+                    title = "OS"
+                    skills = {[ "Windows", "Linux", "WSL"]}
+                />
+                <Skills
+                    title = "Version Control"
+                    skills = {[ "Git", "GitHub"]}
                 />
                 <Skills
                     title = "Personal Skills"
