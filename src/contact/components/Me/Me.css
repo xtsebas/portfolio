@@ -39,11 +39,11 @@ img {
 @media (max-width: 768px) {
     img {
         margin-top: 0;
-        width: 80px;
-        height: 80px;
+        width: 150px;
+        height: 150px;
     }
 
     .profession {
-        margin-top: 0;
+        margin-top: 15px;
     }
 }

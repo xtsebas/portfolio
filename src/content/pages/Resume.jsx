@@ -7,7 +7,10 @@ import Skills from "../components/skills/Skills";
 const Resume = props => {
     return (
         <article className="article">
-            <h1>Resume</h1>
+            <div className="header">
+                <h1>Resume </h1>
+                <div className="line"></div>
+            </div>
             <div className="experience">
                 <Experience
                     title = "Education"

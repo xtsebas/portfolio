@@ -72,6 +72,11 @@
         margin-left: 0%;
     }
 
+    .sidebar li .icon {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
     .sidebar a {
         font-size: 1rem;
         margin-left: 5%;

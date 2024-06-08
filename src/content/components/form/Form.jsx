@@ -9,11 +9,7 @@ const Form = props => {
             <div class="form-card2">
                 <form class="form">
                     <p class="form-heading">Get In Touch</p>
-
-                    <div class="form-field">
-                        <input required="" placeholder="Name" class="input-field" type="text" />
-                    </div>
-
+                    
                     <div class="form-field">
                         <input
                         required=""

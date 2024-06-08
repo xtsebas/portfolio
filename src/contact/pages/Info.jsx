@@ -9,8 +9,8 @@ const Info = props => {
 
     const handleClick = () => {
         const link = document.createElement('a');
-        link.href = '../../assets/cv/ingles.pdf'; 
-        link.download = 'SebastianHcv.pdf';
+        link.href = '../../assets/ingles.pdf'; 
+        link.download = 'Sebastiancv.pdf';
         link.click();
     };
 

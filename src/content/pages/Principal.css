@@ -25,10 +25,27 @@ article::-webkit-scrollbar-thumb:hover {
 }
 
 article h1 {
-    font-size: 3.2em;
+    font-size: 2.2em;
     line-height: 1.1;
     margin-bottom: 1rem;
     text-align: start;
+}
+
+.line {
+    flex-grow: 1;
+    background: linear-gradient(270deg, #850197, #4e9c00);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+    margin-left: 1rem;
+    margin-top: 15px;
+    height: 0.4em;
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 70%;
 }
 
 .hobbies,
@@ -61,17 +78,35 @@ article h1 {
     grid-column: span 2; 
 }
 
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     article {
         width: 70vw;
     }
 
+    .header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
     .hobbies,
     .ido {
         grid-template-columns: 1fr; 
         grid-template-rows: auto; 
-        margin-left: -14%;
+        justify-content: center;
     }
 
     .hobbies h2,
@@ -85,6 +120,7 @@ article h1 {
         grid-template-columns: 1fr; 
         grid-template-rows: auto; 
         margin-left: -14%;
+        justify-content: center;
     }
     
 }

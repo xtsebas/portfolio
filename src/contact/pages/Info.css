@@ -12,6 +12,10 @@ aside {
 /* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
     aside {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-content: center;
+        justify-content: center;
         height: auto;
         width: 100%;
         padding: 1rem;
