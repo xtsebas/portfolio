@@ -78,3 +78,23 @@
     transition: all 0.5s ease-out;
     color: #ffffff;
 }
+
+
+@media (max-width: 768px) {
+    .cardpres {
+        max-width: 100%;
+        max-height: 100%;
+        padding: 1em 0.5em;
+        margin: 0.5em;
+    }
+
+    .card-content {
+        flex-direction: column;
+    }
+
+    .card-image {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+}

@@ -94,6 +94,7 @@ article h1 {
 @media screen and (max-width: 768px) {
     article {
         width: 70vw;
+        margin-bottom: 20px;
     }
 
     .header {

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import Info from './contact/pages/Info';
 import Sidebar from './sidebar/pages/Sidebar';
@@ -17,15 +18,19 @@ import './App.css'
         <Info />
         <Router>
           <div className="router-container">
-            <Routes>
-              <Route path="/Contactme" element={<Contactme />} />
-              <Route path="/Resume" element={<Resume />} />
-              <Route path="/Work" element={<Web />} />
-              <Route path="/" element={<Aboutme />} />
-              <Route path="/Work/Web" element={<Web />} />
-              <Route path="/Work/Repositories" element={<Repositories />} />
-              <Route path="/Work/Design" element={<Design />} />
-            </Routes>
+            <TransitionGroup>
+              <CSSTransition key={location.key} classNames="fade" timeout={300}>
+                <Routes location={location}>
+                  <Route path="/Contactme" element={<Contactme />} />
+                  <Route path="/Resume" element={<Resume />} />
+                  <Route path="/Work" element={<Web />} />
+                  <Route path="/" element={<Aboutme />} />
+                  <Route path="/Work/Web" element={<Web />} />
+                  <Route path="/Work/Repositories" element={<Repositories />} />
+                  <Route path="/Work/Design" element={<Design />} />
+                </Routes>
+              </CSSTransition>
+            </TransitionGroup>
           </div>
           <Sidebar />
         </Router>
