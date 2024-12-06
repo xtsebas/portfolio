@@ -1,0 +1,35 @@
+---
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faFileAlt, faCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+import './style.scss'
+
+// Obtiene la URL actual usando Astro.url
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="sidebar">
+    <ul>
+        <li class="sidebar-text" ><h2>Xtsebas</h2></li>
+        <li>
+            <a href="/" class={currentPath === "/" ? "active" : ""}>
+                <span class="sidebar-text">About Me</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Resume" class={currentPath === "/Resume" ? "active" : ""}>
+                <span class="sidebar-text">Resume</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Work" class={currentPath.startsWith("/Work") ? "active" : ""}>
+                <span class="sidebar-text">Works</span>
+            </a>
+        </li>
+        <li>
+            <a href="/Contactme" class={currentPath === "/Contactme" ? "active" : ""}>
+                <span class="sidebar-text">Contact Me</span>
+            </a>
+        </li>
+    </ul>
+</nav>
