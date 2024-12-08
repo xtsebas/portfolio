@@ -1,0 +1,30 @@
+nav {
+    padding: 1.5rem 0%;
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: rgb(210, 210, 80);
+    top: 0%;
+    z-index: 1000;
+    transform: translateY(0); 
+    transition: transform 0.4s ease, opacity 0.3s ease; 
+
+    &.scrolled {
+        background-color: transparent; 
+    }
+
+    h1 {
+        cursor: pointer;
+        strong {
+            color: rgb(88, 148, 14);
+        }
+    }
+
+    img {
+        width: auto;
+        height: 2rem;
+        cursor: pointer;
+    }
+}

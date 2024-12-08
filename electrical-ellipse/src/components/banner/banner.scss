@@ -1,0 +1,52 @@
+.banner {
+    background-color: rgb(210, 210, 80);
+    width: auto;
+    height: 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+
+    .presentation {
+        .profession {
+            font-weight: 700;
+            padding: 0.1rem;
+            border-radius: 10px;
+            margin-top: -5%;
+            margin-bottom: 0%;
+        }
+        @keyframes typing {
+          from { width: 0; }
+          to { width: 100%; }
+        }
+        
+        @keyframes blink {
+          0% { border-color: transparent; }
+          50% { border-color: black; }
+          100% { border-color: transparent; }
+        }
+        
+        .profession {
+          overflow: hidden;
+          white-space: nowrap;
+          width: 0;
+          animation:
+            typing 4s steps(40, end) forwards,
+            blink 0.75s step-end infinite;
+        }
+
+        h1 {
+            color: rgb(50, 60, 205);
+        }
+    }
+
+    .photo {
+        img {
+            border-radius: 15px;
+            width: 20rem;
+            height: auto;
+        }
+
+    }
+}
