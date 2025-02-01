@@ -27,7 +27,7 @@
     border-radius: 8px; 
 }
 
-.text-content {
+.text-content { 
     display: flex;
     flex-direction: column;
 }

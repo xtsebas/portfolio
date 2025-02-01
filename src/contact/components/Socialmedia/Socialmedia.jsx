@@ -6,7 +6,7 @@ const Socialmedia = props => {
     return (
             <ul className="example-2">
                 <li className="icon-content">
-                    <a href="https://www.linkedin.com/in/sebasti%C3%A1n-huertas-53b749207/" aria-label="LinkedIn" data-social="linkedin" target="__blank">
+                    <a href="https://www.linkedin.com/in/sebastián-huertas-gomez-53b749207" aria-label="LinkedIn" data-social="linkedin" target="__blank">
                         <div className="filled"></div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ const Socialmedia = props => {
                 </li>
                 
                 <li className="icon-content">
-                    <a href="https://x.com/GomezSebs" aria-label="Youtube" data-social="youtube" target="__blank">
+                    <a href="https://x.com/xtsebas744" aria-label="Youtube" data-social="youtube" target="__blank">
                         <div className="filled"></div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

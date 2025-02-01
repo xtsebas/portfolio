@@ -1,7 +1,7 @@
 article {
     background-color: var(--purple-200);
     padding: 2rem;
-    border-radius: 30px;
+    border-radius: 30px 5px 5px 30px;
     height: 60vh;
     width: 50vw;
     display: flex;
@@ -29,6 +29,10 @@ article h1 {
     line-height: 1.1;
     margin-bottom: 1rem;
     text-align: start;
+}
+
+div {
+    display: grid;
 }
 
 .line {

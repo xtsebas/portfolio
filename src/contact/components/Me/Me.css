@@ -15,25 +15,6 @@ img {
     margin-bottom: 0%;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-  }
-  
-  @keyframes blink {
-    0% { border-color: transparent; }
-    50% { border-color: black; }
-    100% { border-color: transparent; }
-  }
-
-  .profession {
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    animation:
-      typing 4s steps(40, end) forwards,
-      blink 0.75s step-end infinite;
-   }
    
 
 @media (max-width: 768px) {
