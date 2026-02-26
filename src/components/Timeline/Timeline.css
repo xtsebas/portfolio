@@ -1,0 +1,130 @@
+.timeline-section {
+  background: var(--bg-primary);
+}
+
+.timeline {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding-left: 3rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent) 0%, rgba(124, 58, 237, 0.15) 100%);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+.timeline-item:last-of-type {
+  padding-bottom: 1rem;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -38px;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 0.7rem;
+  box-shadow: 0 0 14px rgba(124, 58, 237, 0.35);
+  z-index: 1;
+}
+
+.timeline-item.education .timeline-icon {
+  background: var(--accent-light);
+}
+
+.timeline-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.timeline-card:hover {
+  border-color: var(--accent-border);
+  transform: translateX(4px);
+}
+
+.timeline-period {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  padding: 0.15rem 0.6rem;
+  border-radius: 6px;
+}
+
+.timeline-role {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-company {
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: 0.85rem;
+}
+
+.timeline-description {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.timeline-end-dot {
+  position: absolute;
+  left: 9px;
+  bottom: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(124, 58, 237, 0.2);
+  border: 2px solid rgba(124, 58, 237, 0.3);
+}
+
+@media (max-width: 640px) {
+  .timeline {
+    padding-left: 2.5rem;
+  }
+
+  .timeline::before {
+    left: 12px;
+  }
+
+  .timeline-icon {
+    left: -32px;
+    width: 26px;
+    height: 26px;
+    font-size: 0.65rem;
+  }
+
+  .timeline-card {
+    padding: 1.25rem;
+  }
+}

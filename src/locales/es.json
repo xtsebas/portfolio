@@ -1,153 +1,111 @@
 {
-  "sidebar": {
-    "brand": "Xtsebas",
-    "nav": {
-      "aboutme": "Sobre Mí",
-      "resume": "Currículum",
-      "works": "Proyectos",
-      "contact": "Contáctame"
+  "navbar": {
+    "links": {
+      "about": "Sobre Mí",
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "skills": "Habilidades",
+      "contact": "Contacto"
     }
   },
-  "contact": {
-    "name": "Sebastian Huertas",
-    "profession": "Programador Junior",
-    "email": "thiagohugo2018@gmail.com",
-    "phone": "+502 4574-6057",
-    "downloadCV": "Descargar CV"
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Sebastián Huertas",
+    "role": "Desarrollador Full Stack",
+    "roleAlt": "Estudiante de CS",
+    "description": "Apasionado por construir aplicaciones web escalables y resolver problemas complejos con código limpio y eficiente.",
+    "cta": "Ver Proyectos",
+    "ctaContact": "Contáctame"
   },
-  "aboutme": {
+  "about": {
     "title": "Sobre Mí",
-    "bio": "Soy Sebastian Huertas, nacido el 7 de abril de 2004, estudiante de Ciencias de la Computación apasionado por la programación y su capacidad para mejorar sitios web, software y aplicaciones. Tengo habilidades en HTML, CSS, JavaScript, PHP, Node.js, Java, Python y C# básico, y experiencia con frameworks como Laravel, React y Vite, así como Tailwind CSS. Mi conocimiento en bases de datos incluye MySQL y PostgreSQL, y actualmente estoy aprendiendo MongoDB. En mi tercer año en la Universidad del Valle de Guatemala con un promedio superior al 90%, me interesa especialmente la ciberseguridad. Profesionalmente, trabajo en una empresa de desarrollo, aplicando habilidades de resolución de problemas y aprendiendo continuamente. Anteriormente, adquirí habilidades de trabajo en equipo y manejo de presión en gestión de eventos. Mi objetivo es seguir creciendo en el campo tecnológico, aprendiendo y mejorando constantemente para hacer contribuciones significativas.",
-    "whatIDo": {
-      "title": "Qué Hago",
-      "items": [
-        {
-          "title": "Desarrollo Web",
-          "description": "Desarrollo sitios web usando HTML, CSS, JavaScript, PHP y Node.js, y frameworks como Laravel, React y Vite, así como Tailwind CSS."
-        },
-        {
-          "title": "Programación",
-          "description": "Programo en Java, Python y C# básico, y tengo experiencia con bases de datos MySQL y PostgreSQL, con aprendizaje continuo en MongoDB."
-        },
-        {
-          "title": "Programas Backend",
-          "description": "Desarrollo programas backend usando Node.js, PHP y Java, con experiencia en frameworks como Laravel y Express. Actualmente estoy desarrollando un programa para resolver el cubo Rubik."
-        },
-        {
-          "title": "Algoritmos y Estructuras de Datos",
-          "description": "Tengo conocimientos de algoritmos y estructuras de datos, y he desarrollado programas que los utilizan, como una calculadora que convierte de infijo a postfijo."
-        }
-      ]
-    },
-    "hobbies": {
-      "title": "Pasatiempos",
-      "items": [
-        {
-          "title": "Voleibol",
-          "description": "Me encanta jugar voleibol, deporte que practico desde los 12 años. He jugado en equipos escolares y en torneos."
-        },
-        {
-          "title": "Rompecabezas",
-          "description": "Me gustan los rompecabezas, especialmente los 2D, que encuentro desafiantes y entretenidos. También me gusta resolver cubos Rubik."
-        },
-        {
-          "title": "Rocket League",
-          "description": "Disfruto jugando Rocket League, un videojuego que combina fútbol y autos, que encuentro divertido y desafiante. Lo juego desde 2016."
-        },
-        {
-          "title": "Anime y Manga",
-          "description": "Me gusta ver anime y leer manga, que encuentro entretenidos e interesantes. He visto más de 50 series de anime y leído más de 10 series de manga. También tengo una colección de mangas."
-        }
-      ]
-    }
+    "bio": "Soy estudiante de Ingeniería en Ciencias de la Computación en la Universidad del Valle de Guatemala, apasionado por el desarrollo full-stack y la ciberseguridad. Con experiencia práctica en múltiples stacks tecnológicos incluyendo React, Node.js, Laravel y más, disfruto construir soluciones que generen un impacto real.",
+    "stats": [
+      { "value": "2+", "label": "Años de Experiencia" },
+      { "value": "10+", "label": "Proyectos Entregados" },
+      { "value": "90%", "label": "Promedio GPA" }
+    ]
   },
-  "resume": {
-    "title": "Currículum",
-    "education": {
-      "title": "Educación",
-      "description": "Soy estudiante de Ingeniería en Ciencias de la Computación en la Universidad del Valle de Guatemala con un promedio superior al 85%. Tengo habilidades en Python, Java, HTML, CSS, JavaScript, Android Studio y bases de datos SQL como PostgreSQL, MySQL y Oracle. Actualmente avanzo mis conocimientos en Tecnología Web, trabajando con React y Node.js, y profundizando en SQL en un curso de Bases de Datos."
-    },
-    "experience": {
-      "title": "Experiencia",
-      "description": "Trabajé como desarrollador web usando Laravel y PHP para programación frontend, backend y de APIs, incluyendo llamadas a bases de datos. Contribuí al proyecto de anamnesis de la Fundación Pediátrica de Guatemala, resolviendo problemas de frontend y adquiriendo conocimientos básicos de administración de servidores Linux. Como estudiante universitario, poseo habilidades en SQL, Python, Java, JavaScript, Kotlin, HTML, Laravel, React, Bootstrap y jQuery. Estoy ansioso por seguir aprendiendo y contribuir efectivamente a mi equipo."
-    },
-    "skills": {
-      "title": "Habilidades",
-      "categories": {
-        "frontend": "Frontend",
-        "backend": "Backend",
-        "databases": "Bases de Datos",
-        "serverSide": "Lado del Servidor",
-        "frameworks": "Frameworks",
-        "mobile": "Móvil",
-        "os": "Sistemas Operativos",
-        "versionControl": "Control de Versiones",
-        "personal": "Habilidades Personales"
+  "timeline": {
+    "title": "Experiencia & Educación",
+    "items": [
+      {
+        "period": "2024 - Presente",
+        "role": "Desarrollador Web",
+        "company": "Fundación Pediátrica de Guatemala",
+        "description": "Desarrollé y mantuve el proyecto de anamnesis usando Laravel y PHP para programación frontend, backend y de APIs. Resolví problemas de frontend y adquirí conocimientos de administración de servidores Linux.",
+        "type": "work"
       },
-      "personal": [
-        "Trabajo en equipo",
-        "Resolución de problemas",
-        "Adaptabilidad",
-        "Gestión del tiempo",
-        "Comunicación",
-        "Liderazgo",
-        "Creatividad",
-        "Pensamiento crítico",
-        "Inglés B1",
-        "Español nativo"
-      ]
-    }
+      {
+        "period": "2021 - Presente",
+        "role": "Ing. en Ciencias de la Computación",
+        "company": "Universidad del Valle de Guatemala",
+        "description": "Promedio superior al 90%. Enfoque en Tecnología Web, Ingeniería de Software, Algoritmos, Bases de Datos y Ciberseguridad. Avanzando conocimientos en React, Node.js y gestión de bases de datos.",
+        "type": "education"
+      }
+    ]
   },
-  "works": {
-    "title": "Proyectos",
-    "nav": {
-      "web": "Web",
-      "repositories": "Repositorios",
-      "design": "Diseño"
-    },
-    "buttons": {
-      "visitSite": "Ver Sitio",
-      "sourceCode": "Código Fuente"
-    },
-    "web": [
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Una selección de proyectos que he construido en desarrollo web, APIs y diseño.",
+    "items": [
       {
         "title": "Blog Anime",
         "description": "Blog full-stack construido con React, Node.js, Vite y JavaScript, con una API robusta para conectividad de base de datos.",
-        "tech": "React, Node.js, Vite, JavaScript, CSS, HTML, MariaDB"
+        "tech": ["React", "Node.js", "Vite", "JavaScript", "MariaDB"],
+        "repo": "https://github.com/xtsebas/Blog",
+        "demo": "https://663ab7948680e97bea0bbf34--ephemeral-dieffenbachia-a772c8.netlify.app/#/login"
       },
       {
         "title": "Calculadora",
         "description": "Aplicación calculadora en Next.js con diseño responsivo y pruebas unitarias completas para una funcionalidad robusta.",
-        "tech": "Next.js, JavaScript, CSS, HTML, Jest, React Testing Library"
-      }
-    ],
-    "repositories": [
-      {
-        "title": "Api Blog Anime",
-        "description": "API construida con Node.js, Express, Docker, Swagger y JavaScript, con conectividad robusta a base de datos.",
-        "tech": "Node.js, Express, Docker, Swagger, JavaScript, MariaDB"
+        "tech": ["Next.js", "JavaScript", "Jest", "React Testing Library"],
+        "repo": "https://github.com/xtsebas/calculator-testing",
+        "demo": "https://calculatortesting74.netlify.app/"
       },
       {
-        "title": "Infijo a Postfijo",
-        "description": "Conversor de infijo a postfijo construido con Java OOP. Solo funciona localmente como aplicación de consola.",
-        "tech": "Java, OOP, Aplicación de Consola"
-      }
-    ],
-    "design": [
+        "title": "Api Blog Anime",
+        "description": "API RESTful construida con Node.js, Express, Docker y Swagger, con conectividad robusta a MariaDB.",
+        "tech": ["Node.js", "Express", "Docker", "Swagger", "MariaDB"],
+        "repo": "https://github.com/xtsebas/Blog_anime"
+      },
       {
         "title": "SmartYou",
-        "description": "Prototipo en Figma para la clase de Interacción Humano-Computadora. Aplicación móvil para usuarios de SmartFit para agendar espacio en el gimnasio y evitar la sobresaturación, con un sistema de puntos con beneficios para los usuarios.",
-        "tech": "Figma"
+        "description": "Prototipo en Figma para una app móvil que permite a usuarios de SmartFit agendar espacio en el gimnasio y evitar la sobresaturación, con sistema de puntos.",
+        "tech": ["Figma", "Diseño UX/UI"],
+        "demo": "https://www.figma.com/design/nPe4kJxMps3G8JhWo7oTrp/SmartYou?node-id=0-1&t=z2sFgJSrduTrrl0R-1"
       }
-    ]
+    ],
+    "buttons": {
+      "demo": "Ver Demo",
+      "code": "Código Fuente"
+    }
   },
-  "contactme": {
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "languagesTitle": "Lenguajes y Frameworks",
+    "toolsTitle": "Herramientas y Tecnologías",
+    "languages": ["JavaScript", "Python", "Java", "PHP", "React", "Node.js", "Laravel", "Next.js"],
+    "tools": ["PostgreSQL", "MySQL", "Git/GitHub", "Docker", "Linux", "Vite"]
+  },
+  "contact": {
     "title": "Contáctame",
+    "subtitle": "No dudes en escribirme para colaboraciones, oportunidades o simplemente para saludar.",
     "form": {
-      "email": "Correo electrónico",
-      "subject": "Asunto",
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo",
+      "emailPlaceholder": "tu@correo.com",
       "message": "Mensaje",
+      "messagePlaceholder": "Tu mensaje aquí...",
       "send": "Enviar Mensaje"
+    },
+    "info": {
+      "title": "Conectemos",
+      "email": "thiagohugo2018@gmail.com",
+      "phone": "+502 4574-6057",
+      "location": "Ciudad de Guatemala, Guatemala",
+      "followTitle": "Sígueme"
     }
   }
 }
