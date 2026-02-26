@@ -1,12 +1,15 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 import Button from "../../../shared/Button/Button";
 
 const Contact = props => {
+  const { t } = useTranslation();
+
   return (
     <>
-        <p>thiagohugo2018@gmail.com <br/> +502 4574-6057 </p>
-        <Button text="Download CV " onClick={props.onClick} />
+        <p>{t('contact.email')} <br/> {t('contact.phone')}</p>
+        <Button text={t('contact.downloadCV')} onClick={props.onClick} />
     </>
   );
 };

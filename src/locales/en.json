@@ -1,0 +1,153 @@
+{
+  "sidebar": {
+    "brand": "Xtsebas",
+    "nav": {
+      "aboutme": "About Me",
+      "resume": "Resume",
+      "works": "Works",
+      "contact": "Contact Me"
+    }
+  },
+  "contact": {
+    "name": "Sebastian Huertas",
+    "profession": "Junior Programmer",
+    "email": "thiagohugo2018@gmail.com",
+    "phone": "+502 4574-6057",
+    "downloadCV": "Download CV"
+  },
+  "aboutme": {
+    "title": "About Me",
+    "bio": "I am Sebastian Huertas, born on April 7, 2004, a Computer Science student passionate about programming and its ability to enhance websites, software, and applications. I have skills in HTML, CSS, JavaScript, PHP, Node.js, Java, Python, and basic C#, and experience with frameworks like Laravel, React, and Vite, as well as Tailwind CSS. My database knowledge includes MySQL and PostgreSQL, with ongoing learning in MongoDB. Currently in my third year at Universidad del Valle de Guatemala with a GPA above 90%, I am particularly interested in cybersecurity. Professionally, I work at a development company, applying problem-solving skills and learning continuously. Previously, I gained teamwork and pressure management skills in event management. I aim to continue growing in the tech field, constantly learning and improving to make meaningful contributions.",
+    "whatIDo": {
+      "title": "What I Do",
+      "items": [
+        {
+          "title": "Web Development",
+          "description": "I develop websites using HTML, CSS, JavaScript, PHP, and Node.js, and frameworks like Laravel, React, and Vite, as well as Tailwind CSS."
+        },
+        {
+          "title": "Programming",
+          "description": "I program in Java, Python, and basic C#, and have experience with MySQL and PostgreSQL databases, with ongoing learning in MongoDB."
+        },
+        {
+          "title": "Backend Programs",
+          "description": "I develop backend programs using Node.js, PHP, and Java, and have experience with frameworks like Laravel and Express. I'm currently writing code to solve a Rubik's cube."
+        },
+        {
+          "title": "Algorithms and Data Structures",
+          "description": "I have knowledge of algorithms and data structures, and have developed programs that use them, such as a calculator that converts infix to postfix."
+        }
+      ]
+    },
+    "hobbies": {
+      "title": "Hobbies",
+      "items": [
+        {
+          "title": "Volleyball",
+          "description": "I love playing volleyball, a sport that I have practiced since I was 12 years old. I have played in school teams and in tournaments."
+        },
+        {
+          "title": "Puzzles",
+          "description": "I like to do puzzles, especially 2D puzzles, which I find challenging and entertaining. I also like to solve Rubik's cubes."
+        },
+        {
+          "title": "Rocket League",
+          "description": "I enjoy playing Rocket League, a video game that combines soccer and cars, which I find fun and challenging. I have played it since 2016."
+        },
+        {
+          "title": "Anime and Manga",
+          "description": "I like to watch anime and read manga, which I find entertaining and interesting. I have watched more than 50 anime series and read more than 10 manga series. I also have a collection of mangas."
+        }
+      ]
+    }
+  },
+  "resume": {
+    "title": "Resume",
+    "education": {
+      "title": "Education",
+      "description": "I am a Computer Science Engineering student at Universidad del Valle de Guatemala with a GPA over 85%. I have skills in Python, Java, HTML, CSS, JavaScript, Android Studio, and SQL databases like PostgreSQL, MySQL, and Oracle. Currently, I am advancing my knowledge in Web Technology, working with React and Node.js, and deepening my SQL expertise in a Database course."
+    },
+    "experience": {
+      "title": "Experience",
+      "description": "I worked as a web developer using Laravel and PHP for frontend, backend, and API programming, including database calls. I contributed to the Pediatric Foundation of Guatemala's anamnesis project, resolving frontend issues and gaining basic Linux server management knowledge. As a dedicated university student, I possess skills in SQL, Python, Java, JavaScript, Kotlin, HTML, Laravel, React, Bootstrap, and jQuery. I am eager to continue learning and contribute effectively to my team."
+    },
+    "skills": {
+      "title": "Skills",
+      "categories": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "databases": "Databases",
+        "serverSide": "Server Side",
+        "frameworks": "Frameworks",
+        "mobile": "Mobile",
+        "os": "OS",
+        "versionControl": "Version Control",
+        "personal": "Personal Skills"
+      },
+      "personal": [
+        "Teamwork",
+        "Problem-solving",
+        "Adaptability",
+        "Time Management",
+        "Communication",
+        "Leadership",
+        "Creativity",
+        "Critical Thinking",
+        "B1 English",
+        "Native Spanish"
+      ]
+    }
+  },
+  "works": {
+    "title": "Works",
+    "nav": {
+      "web": "Web",
+      "repositories": "Repositories",
+      "design": "Design"
+    },
+    "buttons": {
+      "visitSite": "Visit Site",
+      "sourceCode": "Source Code"
+    },
+    "web": [
+      {
+        "title": "Blog Anime",
+        "description": "Full-stack blog built with React, Node.js, Vite, and JavaScript, featuring a robust API for seamless database connectivity.",
+        "tech": "React, Node.js, Vite, JavaScript, CSS, HTML, MariaDB"
+      },
+      {
+        "title": "Calculator",
+        "description": "Next.js calculator app featuring responsive design and comprehensive unit testing for robust functionality.",
+        "tech": "Next.js, JavaScript, CSS, HTML, Jest, React Testing Library"
+      }
+    ],
+    "repositories": [
+      {
+        "title": "Api Blog Anime",
+        "description": "API built with Node.js, Express, Docker, Swagger and JavaScript, featuring a robust API for seamless database connectivity.",
+        "tech": "Node.js, Express, Docker, Swagger, JavaScript, MariaDB"
+      },
+      {
+        "title": "Infix to Postfix",
+        "description": "Infix to Postfix converter built with Java OOP. It only works locally as a console application.",
+        "tech": "Java, OOP, Console Application"
+      }
+    ],
+    "design": [
+      {
+        "title": "SmartYou",
+        "description": "Figma prototype for a Human-Computer Interaction class. A mobile app for SmartFit users to schedule gym space and avoid overcrowding, featuring a point system with benefits for users.",
+        "tech": "Figma"
+      }
+    ]
+  },
+  "contactme": {
+    "title": "Get In Touch",
+    "form": {
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  }
+}

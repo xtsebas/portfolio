@@ -1,48 +1,50 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 import './Form.css';
 import Button from "../../../shared/Button/Button";
 
 const Form = props => {
+    const { t } = useTranslation();
+
     return (
-        <div class="form-card1">
-            <div class="form-card2">
-                <form class="form">
-                    <p class="form-heading">Get In Touch</p>
-                    
-                    <div class="form-field">
+        <div className="form-card1">
+            <div className="form-card2">
+                <form className="form">
+                    <p className="form-heading">{t('contactme.title')}</p>
+
+                    <div className="form-field">
                         <input
                         required=""
-                        placeholder="Email"
-                        class="input-field"
+                        placeholder={t('contactme.form.email')}
+                        className="input-field"
                         type="email"
                         />
                     </div>
 
-                    <div class="form-field">
+                    <div className="form-field">
                         <input
                         required=""
-                        placeholder="Subject"
-                        class="input-field"
+                        placeholder={t('contactme.form.subject')}
+                        className="input-field"
                         type="text"
                         />
                     </div>
 
-                    <div class="form-field">
+                    <div className="form-field">
                         <textarea
                         required=""
-                        placeholder="Message"
+                        placeholder={t('contactme.form.message')}
                         cols="30"
                         rows="3"
-                        class="input-field"
+                        className="input-field"
                         ></textarea>
                     </div>
 
-                    <Button text={'Send Message'} />
+                    <Button text={t('contactme.form.send')} />
                 </form>
             </div>
         </div>
-
     );
 };
 
