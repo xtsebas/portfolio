@@ -11,7 +11,7 @@
   "hero": {
     "greeting": "Hola, soy",
     "name": "Sebastián Huertas",
-    "role": "Desarrollador Full Stack",
+    "roleSuffix": "Engineer",
     "roleAlt": "Estudiante de CS",
     "description": "Apasionado por construir aplicaciones web escalables y resolver problemas complejos con código limpio y eficiente.",
     "cta": "Ver Proyectos",

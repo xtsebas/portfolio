@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './Hero.css';
 import profileImage from '../../assets/profile.jpg';
+import RotatingText from '../RotatingText/RotatingText';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -16,7 +17,9 @@ const Hero = () => {
           <p className="hero-greeting">{t('hero.greeting')}</p>
           <h1 className="hero-name">{t('hero.name')}</h1>
           <p className="hero-role">
-            <span className="accent-text">{t('hero.role')}</span>
+            <span className="accent-text"><RotatingText /></span>
+            {' '}
+            <span className="role-suffix">{t('hero.roleSuffix')}</span>
             <span className="hero-separator"> / </span>
             <span>{t('hero.roleAlt')}</span>
           </p>
