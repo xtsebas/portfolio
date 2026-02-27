@@ -1,14 +1,17 @@
 .projects-section {
   background: var(--bg-secondary);
+  overflow: hidden;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+/* LogoLoop resets — font-size is set by the library on .logoloop__item;
+   all project card text uses rem so it won't be affected. */
+.projects-section .logoloop {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .project-card {
+  width: 360px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -16,6 +19,7 @@
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
   display: flex;
   flex-direction: column;
+  font-size: 1rem; /* reset from logoloop__item font-size */
 }
 
 .project-card:hover {
@@ -32,11 +36,14 @@
   background: var(--bg-primary);
 }
 
+/* Override LogoLoop's generic ".logoloop__item img" rule */
+.projects-section .logoloop__item .project-media img,
 .project-media img {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   object-fit: cover;
   transition: transform 0.5s ease;
+  pointer-events: none;
 }
 
 .project-card:hover .project-media img {
@@ -122,16 +129,4 @@
 .project-link.primary:hover {
   background: var(--accent-hover);
   transform: translateY(-1px);
-}
-
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-media {
-    height: 170px;
-  }
 }

@@ -150,6 +150,72 @@
   object-position: top center;
 }
 
+/* ── GhostCursor ─────────────────────────────────────────────── */
+.hero-ghost-cursor {
+  z-index: 0;
+}
+
+/* ── Desktop floating language chips ─────────────────────────── */
+.hero-bg-langs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-lang-chip {
+  position: absolute;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 0.2rem 0.55rem;
+  opacity: 0; /* invisible by default — revealed by cursor proximity via JS */
+  transition: opacity 0.18s ease;
+  animation: chipFloat 6s ease-in-out infinite;
+  white-space: nowrap;
+}
+
+.hero-lang-chip:nth-child(2)  { animation-delay: -1.2s; }
+.hero-lang-chip:nth-child(3)  { animation-delay: -2.4s; }
+.hero-lang-chip:nth-child(4)  { animation-delay: -3.6s; }
+.hero-lang-chip:nth-child(5)  { animation-delay: -0.8s; }
+.hero-lang-chip:nth-child(6)  { animation-delay: -4s;   }
+.hero-lang-chip:nth-child(7)  { animation-delay: -1.8s; }
+.hero-lang-chip:nth-child(8)  { animation-delay: -2.9s; }
+.hero-lang-chip:nth-child(9)  { animation-delay: -0.4s; }
+.hero-lang-chip:nth-child(10) { animation-delay: -3.1s; }
+.hero-lang-chip:nth-child(11) { animation-delay: -5s;   }
+.hero-lang-chip:nth-child(12) { animation-delay: -1.5s; }
+.hero-lang-chip:nth-child(13) { animation-delay: -2.2s; }
+.hero-lang-chip:nth-child(14) { animation-delay: -4.5s; }
+
+@keyframes chipFloat {
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-8px); }
+}
+
+/* ── Mobile LogoLoop ─────────────────────────────────────────── */
+.hero-mobile-langs {
+  display: none;
+  width: 100%;
+  padding: 1.5rem 0 0.5rem;
+}
+
+.hero-lang-badge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  padding: 0.22rem 0.65rem;
+  white-space: nowrap;
+}
+
 /* Scroll hint */
 .hero-scroll-hint {
   position: absolute;
@@ -216,6 +282,17 @@
   .hero-image-wrapper {
     width: 200px;
     height: 200px;
+  }
+
+  /* Hide desktop-only elements on mobile */
+  .hero-ghost-cursor,
+  .hero-bg-langs {
+    display: none;
+  }
+
+  /* Show the LogoLoop on mobile */
+  .hero-mobile-langs {
+    display: block;
   }
 }
 

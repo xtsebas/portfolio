@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`navbar ${currentSection > 0 ? 'scrolled' : ''}`}>
+    <header className="navbar">
       <div className="navbar-container">
         <button className="navbar-brand" onClick={() => navigateTo(0)}>SH.</button>
 
