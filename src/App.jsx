@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import './App.css';
 import { NavigationContext } from './contexts/NavigationContext';
-import Navbar from './components/Navbar/Navbar';
+import Sidebar from './components/Sidebar/Sidebar';
 import FullPageScroll from './components/FullPageScroll/FullPageScroll';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <NavigationContext.Provider value={{ currentSection, navigateTo }}>
-      <Navbar />
+      <Sidebar />
       <FullPageScroll currentIndex={currentSection} onNavigate={setCurrentSection}>
         <Hero />
         <About />

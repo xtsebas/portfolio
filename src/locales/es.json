@@ -1,6 +1,7 @@
 {
   "navbar": {
     "links": {
+      "home": "Inicio",
       "about": "Sobre Mí",
       "experience": "Experiencia",
       "projects": "Proyectos",

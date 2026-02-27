@@ -1,6 +1,7 @@
 {
   "navbar": {
     "links": {
+      "home": "Home",
       "about": "About",
       "experience": "Experience",
       "projects": "Projects",
