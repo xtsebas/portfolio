@@ -21,9 +21,18 @@
     "title": "About Me",
     "bio": "I'm a Computer Science Engineering student at Universidad del Valle de Guatemala, passionate about full-stack development and cybersecurity. With hands-on experience across multiple tech stacks including React, Node.js, Laravel, and more, I enjoy building solutions that make a real impact.",
     "stats": [
-      { "value": "2+", "label": "Years Experience" },
-      { "value": "10+", "label": "Projects Delivered" },
-      { "value": "90%", "label": "GPA Score" }
+      {
+        "value": "2+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "10+",
+        "label": "Projects Delivered"
+      },
+      {
+        "value": "90%",
+        "label": "GPA Score"
+      }
     ]
   },
   "timeline": {
@@ -43,7 +52,8 @@
         "description": "GPA above 90%. Focus on Web Technology, Software Engineering, Algorithms, Databases, and Cybersecurity. Currently advancing knowledge in React, Node.js, and database management.",
         "type": "education"
       }
-    ]
+    ],
+    "scrollHint": "scroll to explore"
   },
   "projects": {
     "title": "Featured Projects",
@@ -52,27 +62,47 @@
       {
         "title": "Blog Anime",
         "description": "Full-stack blog built with React, Node.js, Vite, and JavaScript, featuring a robust API for seamless database connectivity.",
-        "tech": ["React", "Node.js", "Vite", "JavaScript", "MariaDB"],
+        "tech": [
+          "React",
+          "Node.js",
+          "Vite",
+          "JavaScript",
+          "MariaDB"
+        ],
         "repo": "https://github.com/xtsebas/Blog",
         "demo": "https://663ab7948680e97bea0bbf34--ephemeral-dieffenbachia-a772c8.netlify.app/#/login"
       },
       {
         "title": "Calculator",
         "description": "Next.js calculator app featuring responsive design and comprehensive unit testing for robust functionality.",
-        "tech": ["Next.js", "JavaScript", "Jest", "React Testing Library"],
+        "tech": [
+          "Next.js",
+          "JavaScript",
+          "Jest",
+          "React Testing Library"
+        ],
         "repo": "https://github.com/xtsebas/calculator-testing",
         "demo": "https://calculatortesting74.netlify.app/"
       },
       {
         "title": "Api Blog Anime",
         "description": "RESTful API built with Node.js, Express, Docker and Swagger, featuring robust database connectivity with MariaDB.",
-        "tech": ["Node.js", "Express", "Docker", "Swagger", "MariaDB"],
+        "tech": [
+          "Node.js",
+          "Express",
+          "Docker",
+          "Swagger",
+          "MariaDB"
+        ],
         "repo": "https://github.com/xtsebas/Blog_anime"
       },
       {
         "title": "SmartYou",
         "description": "Figma prototype for a mobile app allowing SmartFit users to schedule gym sessions and avoid overcrowding, with a points reward system.",
-        "tech": ["Figma", "UX/UI Design"],
+        "tech": [
+          "Figma",
+          "UX/UI Design"
+        ],
         "demo": "https://www.figma.com/design/nPe4kJxMps3G8JhWo7oTrp/SmartYou?node-id=0-1&t=z2sFgJSrduTrrl0R-1"
       }
     ],
@@ -85,8 +115,24 @@
     "title": "Technical Skills",
     "languagesTitle": "Languages & Frameworks",
     "toolsTitle": "Tools & Technologies",
-    "languages": ["JavaScript", "Python", "Java", "PHP", "React", "Node.js", "Laravel", "Next.js"],
-    "tools": ["PostgreSQL", "MySQL", "Git/GitHub", "Docker", "Linux", "Vite"]
+    "languages": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "PHP",
+      "React",
+      "Node.js",
+      "Laravel",
+      "Next.js"
+    ],
+    "tools": [
+      "PostgreSQL",
+      "MySQL",
+      "Git/GitHub",
+      "Docker",
+      "Linux",
+      "Vite"
+    ]
   },
   "contact": {
     "title": "Get In Touch",

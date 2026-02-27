@@ -21,9 +21,18 @@
     "title": "Sobre Mí",
     "bio": "Soy estudiante de Ingeniería en Ciencias de la Computación en la Universidad del Valle de Guatemala, apasionado por el desarrollo full-stack y la ciberseguridad. Con experiencia práctica en múltiples stacks tecnológicos incluyendo React, Node.js, Laravel y más, disfruto construir soluciones que generen un impacto real.",
     "stats": [
-      { "value": "2+", "label": "Años de Experiencia" },
-      { "value": "10+", "label": "Proyectos Entregados" },
-      { "value": "90%", "label": "Promedio GPA" }
+      {
+        "value": "2+",
+        "label": "Años de Experiencia"
+      },
+      {
+        "value": "10+",
+        "label": "Proyectos Entregados"
+      },
+      {
+        "value": "90%",
+        "label": "Promedio GPA"
+      }
     ]
   },
   "timeline": {
@@ -43,7 +52,8 @@
         "description": "Promedio superior al 90%. Enfoque en Tecnología Web, Ingeniería de Software, Algoritmos, Bases de Datos y Ciberseguridad. Avanzando conocimientos en React, Node.js y gestión de bases de datos.",
         "type": "education"
       }
-    ]
+    ],
+    "scrollHint": "desplaza para explorar"
   },
   "projects": {
     "title": "Proyectos Destacados",
@@ -52,27 +62,47 @@
       {
         "title": "Blog Anime",
         "description": "Blog full-stack construido con React, Node.js, Vite y JavaScript, con una API robusta para conectividad de base de datos.",
-        "tech": ["React", "Node.js", "Vite", "JavaScript", "MariaDB"],
+        "tech": [
+          "React",
+          "Node.js",
+          "Vite",
+          "JavaScript",
+          "MariaDB"
+        ],
         "repo": "https://github.com/xtsebas/Blog",
         "demo": "https://663ab7948680e97bea0bbf34--ephemeral-dieffenbachia-a772c8.netlify.app/#/login"
       },
       {
         "title": "Calculadora",
         "description": "Aplicación calculadora en Next.js con diseño responsivo y pruebas unitarias completas para una funcionalidad robusta.",
-        "tech": ["Next.js", "JavaScript", "Jest", "React Testing Library"],
+        "tech": [
+          "Next.js",
+          "JavaScript",
+          "Jest",
+          "React Testing Library"
+        ],
         "repo": "https://github.com/xtsebas/calculator-testing",
         "demo": "https://calculatortesting74.netlify.app/"
       },
       {
         "title": "Api Blog Anime",
         "description": "API RESTful construida con Node.js, Express, Docker y Swagger, con conectividad robusta a MariaDB.",
-        "tech": ["Node.js", "Express", "Docker", "Swagger", "MariaDB"],
+        "tech": [
+          "Node.js",
+          "Express",
+          "Docker",
+          "Swagger",
+          "MariaDB"
+        ],
         "repo": "https://github.com/xtsebas/Blog_anime"
       },
       {
         "title": "SmartYou",
         "description": "Prototipo en Figma para una app móvil que permite a usuarios de SmartFit agendar espacio en el gimnasio y evitar la sobresaturación, con sistema de puntos.",
-        "tech": ["Figma", "Diseño UX/UI"],
+        "tech": [
+          "Figma",
+          "Diseño UX/UI"
+        ],
         "demo": "https://www.figma.com/design/nPe4kJxMps3G8JhWo7oTrp/SmartYou?node-id=0-1&t=z2sFgJSrduTrrl0R-1"
       }
     ],
@@ -85,8 +115,24 @@
     "title": "Habilidades Técnicas",
     "languagesTitle": "Lenguajes y Frameworks",
     "toolsTitle": "Herramientas y Tecnologías",
-    "languages": ["JavaScript", "Python", "Java", "PHP", "React", "Node.js", "Laravel", "Next.js"],
-    "tools": ["PostgreSQL", "MySQL", "Git/GitHub", "Docker", "Linux", "Vite"]
+    "languages": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "PHP",
+      "React",
+      "Node.js",
+      "Laravel",
+      "Next.js"
+    ],
+    "tools": [
+      "PostgreSQL",
+      "MySQL",
+      "Git/GitHub",
+      "Docker",
+      "Linux",
+      "Vite"
+    ]
   },
   "contact": {
     "title": "Contáctame",

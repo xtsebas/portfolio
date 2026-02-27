@@ -1,39 +1,110 @@
+/* ── Section shell ────────────────────────────────────────────── */
 .timeline-section {
   background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+  overflow: hidden;
 }
 
-.timeline {
+/* ── Header ───────────────────────────────────────────────────── */
+.tl-header {
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+.tl-hint {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  user-select: none;
+}
+
+.tl-hint-arrow {
+  animation: hintBounce 1.6s ease-in-out infinite;
+}
+
+@keyframes hintBounce {
+  0%, 100% { transform: translateX(0);    }
+  40%       { transform: translateX(5px);  }
+  60%       { transform: translateX(-5px); }
+}
+
+/* ── Scroll container ─────────────────────────────────────────── */
+.tl-scroll {
+  flex: 1;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+}
+.tl-scroll::-webkit-scrollbar { display: none; }
+.tl-scroll:active              { cursor: grabbing; }
+
+/* ── Wide track ───────────────────────────────────────────────── */
+.tl-track {
+  display: flex;
+  align-items: center;       /* vertically centers every child on the line */
+  height: 100%;
+  min-width: max-content;
+  padding: 0 12vw;
   position: relative;
-  max-width: 720px;
-  margin: 0 auto;
-  padding-left: 3rem;
 }
 
-.timeline::before {
+/* Horizontal center line */
+.tl-track::before {
   content: '';
   position: absolute;
-  left: 15px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--accent) 0%, rgba(124, 58, 237, 0.15) 100%);
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    to right,
+    transparent 2%,
+    var(--accent) 8%,
+    rgba(124, 58, 237, 0.25) 92%,
+    transparent 98%
+  );
+  pointer-events: none;
 }
 
-.timeline-item {
+/* ── Start / end caps ─────────────────────────────────────────── */
+.tl-cap {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.7);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+/* ── Timeline item ────────────────────────────────────────────── */
+.tl-item {
   position: relative;
-  padding-bottom: 2.5rem;
+  width: 300px;
+  height: 100%;       /* full track height so 50% = center line */
+  flex-shrink: 0;
 }
 
-.timeline-item:last-of-type {
-  padding-bottom: 1rem;
-}
-
-.timeline-icon {
+/* ── Dot — always pinned to the center line ───────────────────── */
+.tl-dot {
   position: absolute;
-  left: -38px;
-  top: 0;
-  width: 30px;
-  height: 30px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: var(--bg-secondary);
   border: 2px solid var(--accent);
@@ -42,89 +113,186 @@
   justify-content: center;
   color: var(--accent);
   font-size: 0.7rem;
-  box-shadow: 0 0 14px rgba(124, 58, 237, 0.35);
+  box-shadow: 0 0 16px rgba(124, 58, 237, 0.4);
+  z-index: 2;
+}
+
+.tl-dot.education { background: var(--accent-light); }
+
+/* ── Connector — vertical bar from dot edge to card ──────────── */
+.tl-connector {
+  position: absolute;
+  left: calc(50% - 1px);
+  width: 2px;
+  height: 44px;       /* length of the connector */
   z-index: 1;
 }
 
-.timeline-item.education .timeline-icon {
-  background: var(--accent-light);
+/* Above: connector runs upward from dot */
+.tl-item.tl-above .tl-connector {
+  bottom: calc(50% + 16px);    /* 16px ≈ half of 36px dot, leaves 2px gap */
+  background: linear-gradient(to top, var(--accent), rgba(124, 58, 237, 0.25));
 }
 
-.timeline-card {
+/* Below: connector runs downward from dot */
+.tl-item.tl-below .tl-connector {
+  top: calc(50% + 16px);
+  background: linear-gradient(to bottom, var(--accent), rgba(124, 58, 237, 0.25));
+}
+
+/* ── Card ─────────────────────────────────────────────────────── */
+.tl-card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.5rem 1.75rem;
-  transition: border-color var(--transition), transform var(--transition);
+  padding: 1.25rem 1.5rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-.timeline-card:hover {
+.tl-card:hover {
   border-color: var(--accent-border);
-  transform: translateX(4px);
+  box-shadow: var(--shadow-accent);
 }
 
-.timeline-period {
+/* Card sits above the line: bottom edge = dot top edge + connector */
+.tl-item.tl-above .tl-card {
+  bottom: calc(50% + 16px + 44px + 4px);  /* half-dot + connector + gap */
+}
+
+/* Card sits below the line */
+.tl-item.tl-below .tl-card {
+  top: calc(50% + 16px + 44px + 4px);
+}
+
+/* ── Card text ────────────────────────────────────────────────── */
+.tl-period {
   display: inline-block;
   color: var(--accent);
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
   background: var(--accent-light);
   border: 1px solid var(--accent-border);
-  padding: 0.15rem 0.6rem;
+  padding: 0.1rem 0.5rem;
   border-radius: 6px;
 }
 
-.timeline-role {
-  font-size: 1.1rem;
+.tl-role {
+  font-size: 0.97rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
 }
 
-.timeline-company {
+.tl-company {
   color: var(--accent);
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   font-weight: 500;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.6rem;
 }
 
-.timeline-description {
+.tl-description {
   color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: 0.8rem;
+  line-height: 1.65;
 }
 
-.timeline-end-dot {
-  position: absolute;
-  left: 9px;
-  bottom: 0;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: rgba(124, 58, 237, 0.2);
-  border: 2px solid rgba(124, 58, 237, 0.3);
+/* ── Progress bar ─────────────────────────────────────────────── */
+.tl-progress-track {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
 }
 
-@media (max-width: 640px) {
-  .timeline {
-    padding-left: 2.5rem;
+.tl-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.08s linear;
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.5);
+}
+
+/* ── Mobile: vertical layout ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .timeline-section {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding: 6rem 0 3rem;
   }
 
-  .timeline::before {
-    left: 12px;
+  .tl-header {
+    padding-top: 0;
+    flex-direction: column;
+    gap: 0.25rem;
   }
 
-  .timeline-icon {
-    left: -32px;
-    width: 26px;
-    height: 26px;
-    font-size: 0.65rem;
+  .tl-hint { display: none; }
+
+  .tl-scroll {
+    overflow-x: visible;
+    overflow-y: visible;
+    cursor: default;
+    flex: none;
   }
 
-  .timeline-card {
-    padding: 1.25rem;
+  .tl-track {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: unset;
+    padding: 0 1rem 0 3.5rem;
+    height: auto;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
   }
+
+  /* Vertical line on mobile */
+  .tl-track::before {
+    top: 0; bottom: 0;
+    left: 1.85rem; right: auto;
+    width: 2px; height: auto;
+    background: linear-gradient(to bottom, var(--accent), rgba(124, 58, 237, 0.15));
+    transform: none;
+  }
+
+  .tl-cap { display: none; }
+
+  .tl-item,
+  .tl-item.tl-above,
+  .tl-item.tl-below {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  /* Dot on the vertical line */
+  .tl-dot {
+    position: absolute;
+    left: -2.55rem;
+    top: 0;
+    transform: none;
+  }
+
+  .tl-connector { display: none; }
+
+  /* Cards full-width, static flow */
+  .tl-card,
+  .tl-item.tl-above .tl-card,
+  .tl-item.tl-below .tl-card {
+    position: static;
+    transform: none;
+    width: 100%;
+    left: auto; top: auto; bottom: auto;
+  }
+
+  .tl-progress-track { display: none; }
 }

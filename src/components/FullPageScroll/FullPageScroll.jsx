@@ -25,6 +25,21 @@ export default function FullPageScroll({ children, currentIndex, onNavigate }) {
       const page = pageRefs.current[currentIndex];
       if (!page) return;
 
+      // ── Horizontal-scroll section (Timeline) ─────────────────
+      const hScroll = page.querySelector('.fps-h-scroll');
+      if (hScroll) {
+        e.preventDefault();
+        const atRight = hScroll.scrollLeft + hScroll.clientWidth >= hScroll.scrollWidth - 2;
+        const atLeft  = hScroll.scrollLeft <= 2;
+
+        if      (e.deltaY > 0 && !atRight) hScroll.scrollLeft += Math.abs(e.deltaY);
+        else if (e.deltaY > 0 &&  atRight) navigate(1);
+        else if (e.deltaY < 0 && !atLeft)  hScroll.scrollLeft -= Math.abs(e.deltaY);
+        else if (e.deltaY < 0 &&  atLeft)  navigate(-1);
+        return;
+      }
+
+      // ── Normal vertical section ───────────────────────────────
       const atBottom = page.scrollTop + page.clientHeight >= page.scrollHeight - 2;
       const atTop    = page.scrollTop <= 2;
 
@@ -52,10 +67,26 @@ export default function FullPageScroll({ children, currentIndex, onNavigate }) {
       const page  = pageRefs.current[currentIndex];
       if (!page) return;
 
+      // ── Horizontal-scroll section ─────────────────────────────
+      const hScroll = page.querySelector('.fps-h-scroll');
+      if (hScroll) {
+        const atRight = hScroll.scrollLeft + hScroll.clientWidth >= hScroll.scrollWidth - 5;
+        const atLeft  = hScroll.scrollLeft <= 5;
+
+        if      (delta > 50 && !atRight) hScroll.scrollLeft += 320;
+        else if (delta > 50 &&  atRight) navigate(1);
+        else if (delta < -50 && !atLeft) hScroll.scrollLeft -= 320;
+        else if (delta < -50 &&  atLeft) navigate(-1);
+
+        touchStartY.current = null;
+        return;
+      }
+
+      // ── Normal section ────────────────────────────────────────
       const atBottom = page.scrollTop + page.clientHeight >= page.scrollHeight - 5;
       const atTop    = page.scrollTop <= 5;
 
-      if (delta > 70 && atBottom)  navigate(1);
+      if (delta > 70 && atBottom)    navigate(1);
       else if (delta < -70 && atTop) navigate(-1);
       touchStartY.current = null;
     };
@@ -74,6 +105,25 @@ export default function FullPageScroll({ children, currentIndex, onNavigate }) {
       const tag = document.activeElement?.tagName;
       if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
 
+      const page    = pageRefs.current[currentIndex];
+      const hScroll = page?.querySelector('.fps-h-scroll');
+
+      if (hScroll) {
+        const atRight = hScroll.scrollLeft + hScroll.clientWidth >= hScroll.scrollWidth - 2;
+        const atLeft  = hScroll.scrollLeft <= 2;
+
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'PageDown') {
+          e.preventDefault();
+          if (!atRight) hScroll.scrollLeft += 320;
+          else navigate(1);
+        } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'PageUp') {
+          e.preventDefault();
+          if (!atLeft) hScroll.scrollLeft -= 320;
+          else navigate(-1);
+        }
+        return;
+      }
+
       if (e.key === 'ArrowDown' || e.key === 'PageDown') {
         e.preventDefault();
         navigate(1);
@@ -85,7 +135,7 @@ export default function FullPageScroll({ children, currentIndex, onNavigate }) {
 
     window.addEventListener('keydown', handleKeydown);
     return () => window.removeEventListener('keydown', handleKeydown);
-  }, [navigate]);
+  }, [navigate, currentIndex]);
 
   /* ── Render ─────────────────────────────────────────────────── */
   return (
