@@ -35,7 +35,7 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -67,11 +67,15 @@ ul {
 }
 
 section {
+  /* Each section is one full "page" inside the scroll container */
+  min-height: 100vh;
+  background-color: var(--bg-primary);
   padding: 6rem 0;
-}
 
-section[id] {
-  scroll-margin-top: 75px;
+  /* Center content vertically — hero overrides this with its own flex rules */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .section-header {

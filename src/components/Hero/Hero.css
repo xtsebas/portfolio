@@ -158,6 +158,7 @@
   transform: translateX(-50%);
   width: 26px;
   height: 42px;
+  background: none;
   border: 2px solid var(--border);
   border-radius: 13px;
   display: flex;

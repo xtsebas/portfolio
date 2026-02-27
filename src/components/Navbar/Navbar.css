@@ -32,6 +32,7 @@
   color: var(--accent);
   letter-spacing: -0.06em;
   flex-shrink: 0;
+  background: none;
   transition: opacity var(--transition);
 }
 
@@ -45,16 +46,19 @@
   gap: 0.15rem;
 }
 
-.navbar-links a {
+.navbar-links a,
+.navbar-links button {
   color: var(--text-secondary);
   font-size: 0.88rem;
   font-weight: 500;
   padding: 0.4rem 0.9rem;
   border-radius: 8px;
+  background: none;
   transition: color var(--transition), background var(--transition);
 }
 
-.navbar-links a:hover {
+.navbar-links a:hover,
+.navbar-links button:hover {
   color: var(--text-primary);
   background: var(--accent-light);
 }
@@ -141,7 +145,8 @@
     border-bottom-color: var(--border);
   }
 
-  .navbar-links a {
+  .navbar-links a,
+  .navbar-links button {
     width: 100%;
     text-align: center;
     padding: 0.75rem;

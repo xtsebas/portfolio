@@ -1,11 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigation } from '../../contexts/NavigationContext';
 import './Hero.css';
 import profileImage from '../../assets/profile.jpg';
 import RotatingText from '../RotatingText/RotatingText';
 
 const Hero = () => {
   const { t } = useTranslation();
+  const { navigateTo } = useNavigation();
 
   return (
     <section id="hero" className="hero">
@@ -25,12 +27,12 @@ const Hero = () => {
           </p>
           <p className="hero-description">{t('hero.description')}</p>
           <div className="hero-actions">
-            <a href="#projects" className="btn-primary">
-              {t('hero.cta')} ↓
-            </a>
-            <a href="#contact" className="btn-outline">
+            <button className="btn-primary" onClick={() => navigateTo(3)}>
+              {t('hero.cta')} →
+            </button>
+            <button className="btn-outline" onClick={() => navigateTo(5)}>
               {t('hero.ctaContact')}
-            </a>
+            </button>
           </div>
         </div>
 
@@ -41,9 +43,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <a href="#about" className="hero-scroll-hint" aria-label="Scroll down">
+      <button className="hero-scroll-hint" onClick={() => navigateTo(1)} aria-label="Scroll down">
         <span></span>
-      </a>
+      </button>
     </section>
   );
 };

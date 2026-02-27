@@ -1,36 +1,41 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigation } from '../../contexts/NavigationContext';
 import './Navbar.css';
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
-  const [scrolled, setScrolled] = useState(false);
+  const { currentSection, navigateTo } = useNavigation();
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const toggleLang = () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en');
   };
 
-  const navLinks = ['about', 'experience', 'projects', 'skills', 'contact'];
+  // Maps nav key → section index
+  const navLinks = [
+    { key: 'about',      index: 1 },
+    { key: 'experience', index: 2 },
+    { key: 'projects',   index: 3 },
+    { key: 'skills',     index: 4 },
+    { key: 'contact',    index: 5 },
+  ];
 
-  const handleLinkClick = () => setMenuOpen(false);
+  const handleLinkClick = (index) => {
+    navigateTo(index);
+    setMenuOpen(false);
+  };
 
   return (
-    <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <header className={`navbar ${currentSection > 0 ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <a href="#hero" className="navbar-brand">SH.</a>
+        <button className="navbar-brand" onClick={() => navigateTo(0)}>SH.</button>
 
         <nav className={`navbar-links ${menuOpen ? 'open' : ''}`}>
-          {navLinks.map(key => (
-            <a key={key} href={`#${key}`} onClick={handleLinkClick}>
+          {navLinks.map(({ key, index }) => (
+            <button key={key} onClick={() => handleLinkClick(index)}>
               {t(`navbar.links.${key}`)}
-            </a>
+            </button>
           ))}
         </nav>
 
