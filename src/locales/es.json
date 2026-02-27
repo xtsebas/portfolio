@@ -143,6 +143,9 @@
       "demo": "Ver Demo",
       "code": "Código Fuente"
     },
+    "seeMore": "Ver Todos los Proyectos",
+    "allTitle": "Todos los Proyectos",
+    "back": "Regresar",
     "modal": {
       "overview": "Descripción",
       "keyFeatures": "Características",

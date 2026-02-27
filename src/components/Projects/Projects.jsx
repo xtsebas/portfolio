@@ -2,9 +2,10 @@ import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import LogoLoop from '../LogoLoop/LogoLoop';
 import ProjectModal from './ProjectModal';
+import AllProjectsPage from './AllProjectsPage';
 import './Projects.css';
 
 const isDesktop = () => window.matchMedia('(min-width: 1024px)').matches;
@@ -20,6 +21,7 @@ const Projects = () => {
   const { t } = useTranslation();
   const projects = t('projects.items', { returnObjects: true });
   const [selectedIndex, setSelectedIndex] = useState(null);
+  const [showAll, setShowAll] = useState(false);
 
   const logoItems = useMemo(() => projects.map((project, i) => ({
     node: (
@@ -92,11 +94,26 @@ const Projects = () => {
         ariaLabel="Projects"
       />
 
+      <div className="projects-footer">
+        <button className="projects-see-more-btn" onClick={() => setShowAll(true)}>
+          <span>{t('projects.seeMore')}</span>
+          <FontAwesomeIcon icon={faArrowRight} />
+        </button>
+      </div>
+
       {selectedIndex !== null && (
         <ProjectModal
           project={projects[selectedIndex]}
           image={projectImages[selectedIndex]}
           onClose={() => setSelectedIndex(null)}
+        />
+      )}
+
+      {showAll && (
+        <AllProjectsPage
+          projects={projects}
+          images={projectImages}
+          onClose={() => setShowAll(false)}
         />
       )}
     </section>

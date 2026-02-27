@@ -136,3 +136,33 @@
   background: var(--accent-hover);
   transform: translateY(-1px);
 }
+
+/* ── See More button ── */
+.projects-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.projects-see-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--accent-border);
+  border-radius: 10px;
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.55rem 1.3rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.projects-see-more-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-accent);
+}

@@ -1,0 +1,111 @@
+/* ── Full-screen overlay ── */
+.ap-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  animation: ap-slide-up 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes ap-slide-up {
+  from { transform: translateY(100%); opacity: 0.6; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ── Header ── */
+.ap-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 64px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  background: var(--bg-primary);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.ap-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+  font-family: inherit;
+}
+
+.ap-back-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-border);
+  background: var(--accent-light);
+}
+
+.ap-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* Balances the back button so the title is centered */
+.ap-header-end {
+  width: 110px;
+}
+
+/* ── Scrollable body ── */
+.ap-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2.5rem 2rem 3rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.ap-body::-webkit-scrollbar { width: 6px; }
+.ap-body::-webkit-scrollbar-track { background: transparent; }
+.ap-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── Project grid ── */
+.ap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Card override: make it always clickable in this view ── */
+.ap-card {
+  cursor: pointer;
+  width: auto; /* override the fixed 360px from .project-card */
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .ap-header {
+    padding: 0 1rem;
+  }
+
+  .ap-body {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .ap-header-end {
+    width: 80px;
+  }
+
+  .ap-title {
+    font-size: 0.95rem;
+  }
+}

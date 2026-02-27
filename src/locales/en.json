@@ -143,6 +143,9 @@
       "demo": "Live Demo",
       "code": "Source Code"
     },
+    "seeMore": "See All Projects",
+    "allTitle": "All Projects",
+    "back": "Back",
     "modal": {
       "overview": "Overview",
       "keyFeatures": "Key Features",
