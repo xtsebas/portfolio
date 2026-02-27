@@ -145,7 +145,10 @@
       "emailPlaceholder": "tu@correo.com",
       "message": "Mensaje",
       "messagePlaceholder": "Tu mensaje aquí...",
-      "send": "Enviar Mensaje"
+      "send": "Enviar Mensaje",
+      "sending": "Enviando…",
+      "successMsg": "¡Mensaje enviado! Te respondo pronto.",
+      "errorMsg": "Algo salió mal. Por favor intenta de nuevo."
     },
     "info": {
       "title": "Conectemos",

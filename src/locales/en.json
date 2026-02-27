@@ -145,7 +145,10 @@
       "emailPlaceholder": "your@email.com",
       "message": "Message",
       "messagePlaceholder": "Your message here...",
-      "send": "Send Message"
+      "send": "Send Message",
+      "sending": "Sending…",
+      "successMsg": "Message sent! I'll get back to you soon.",
+      "errorMsg": "Something went wrong. Please try again."
     },
     "info": {
       "title": "Let's Connect",

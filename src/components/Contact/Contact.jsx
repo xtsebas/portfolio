@@ -2,24 +2,49 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faLocationDot, faCircleCheck, faCircleXmark, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
+
+const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+const EMPTY = { name: '', email: '', message: '' };
 
 const Contact = () => {
   const { t } = useTranslation();
   const info = t('contact.info', { returnObjects: true });
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [form, setForm]     = useState(EMPTY);
+  const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
 
   const handleChange = e => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Portfolio contact from ${form.name}`);
-    const body = encodeURIComponent(form.message);
-    window.location.href = `mailto:${info.email}?subject=${subject}&body=${body}`;
+    setStatus('sending');
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          name:    form.name,
+          email:   form.email,
+          message: form.message,
+        },
+        { publicKey: PUBLIC_KEY }
+      );
+      setStatus('success');
+      setForm(EMPTY);
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      setStatus('error');
+    }
   };
+
+  const isSending = status === 'sending';
 
   return (
     <section id="contact" className="contact-section">
@@ -39,6 +64,7 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 required
+                disabled={isSending}
               />
             </div>
             <div className="form-group">
@@ -50,6 +76,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 required
+                disabled={isSending}
               />
             </div>
             <div className="form-group">
@@ -61,10 +88,33 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 required
+                disabled={isSending}
               ></textarea>
             </div>
-            <button type="submit" className="contact-submit">
-              {t('contact.form.send')}
+
+            {/* Feedback banner */}
+            {status === 'success' && (
+              <div className="contact-feedback contact-feedback--success">
+                <FontAwesomeIcon icon={faCircleCheck} />
+                {t('contact.form.successMsg', 'Message sent! I\'ll get back to you soon.')}
+              </div>
+            )}
+            {status === 'error' && (
+              <div className="contact-feedback contact-feedback--error">
+                <FontAwesomeIcon icon={faCircleXmark} />
+                {t('contact.form.errorMsg', 'Something went wrong. Please try again.')}
+              </div>
+            )}
+
+            <button type="submit" className="contact-submit" disabled={isSending}>
+              {isSending ? (
+                <span className="contact-submit-spinner" />
+              ) : (
+                <FontAwesomeIcon icon={faPaperPlane} />
+              )}
+              {isSending
+                ? t('contact.form.sending', 'Sending…')
+                : t('contact.form.send')}
             </button>
           </form>
 
