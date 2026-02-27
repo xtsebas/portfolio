@@ -22,6 +22,12 @@
   font-size: 1rem; /* reset from logoloop__item font-size */
 }
 
+@media (min-width: 1024px) {
+  .project-card--clickable {
+    cursor: pointer;
+  }
+}
+
 .project-card:hover {
   border-color: var(--accent-border);
   transform: translateY(-5px);

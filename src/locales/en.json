@@ -70,6 +70,14 @@
           "JavaScript",
           "MariaDB"
         ],
+        "features": [
+          "User authentication and session management",
+          "Anime post creation with rich text editor",
+          "RESTful API backend with Node.js and Express",
+          "MariaDB integration for persistent data storage"
+        ],
+        "status": "Completed",
+        "timeline": "2023",
         "repo": "https://github.com/xtsebas/Blog",
         "demo": "https://663ab7948680e97bea0bbf34--ephemeral-dieffenbachia-a772c8.netlify.app/#/login"
       },
@@ -82,6 +90,14 @@
           "Jest",
           "React Testing Library"
         ],
+        "features": [
+          "Responsive design for all screen sizes",
+          "Full unit test coverage with Jest",
+          "Keyboard input support",
+          "Clean and accessible UI"
+        ],
+        "status": "Completed",
+        "timeline": "2023",
         "repo": "https://github.com/xtsebas/calculator-testing",
         "demo": "https://calculatortesting74.netlify.app/"
       },
@@ -95,6 +111,14 @@
           "Swagger",
           "MariaDB"
         ],
+        "features": [
+          "RESTful endpoints for full CRUD operations",
+          "Interactive Swagger UI documentation",
+          "Containerized deployment with Docker",
+          "MariaDB for relational data management"
+        ],
+        "status": "Completed",
+        "timeline": "2023",
         "repo": "https://github.com/xtsebas/Blog_anime"
       },
       {
@@ -104,12 +128,30 @@
           "Figma",
           "UX/UI Design"
         ],
+        "features": [
+          "Gym session scheduling and slot reservation",
+          "Real-time occupancy visualization",
+          "Points reward system for frequent users",
+          "Mobile-first UX with accessibility focus"
+        ],
+        "status": "Prototype",
+        "timeline": "2023",
         "demo": "https://www.figma.com/design/nPe4kJxMps3G8JhWo7oTrp/SmartYou?node-id=0-1&t=z2sFgJSrduTrrl0R-1"
       }
     ],
     "buttons": {
       "demo": "Live Demo",
       "code": "Source Code"
+    },
+    "modal": {
+      "overview": "Overview",
+      "keyFeatures": "Key Features",
+      "technologies": "Technologies",
+      "links": "Links",
+      "status": "Status",
+      "timeline": "Timeline",
+      "viewGithub": "View on GitHub",
+      "liveDemo": "Live Demo"
     }
   },
   "skills": {

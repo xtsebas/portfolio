@@ -1,10 +1,13 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import LogoLoop from '../LogoLoop/LogoLoop';
+import ProjectModal from './ProjectModal';
 import './Projects.css';
+
+const isDesktop = () => window.matchMedia('(min-width: 1024px)').matches;
 
 import animeBlog from '../../assets/animeblog.gif';
 import calculator from '../../assets/calculator.gif';
@@ -16,10 +19,14 @@ const projectImages = [animeBlog, calculator, apibloganime, smartyou];
 const Projects = () => {
   const { t } = useTranslation();
   const projects = t('projects.items', { returnObjects: true });
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   const logoItems = useMemo(() => projects.map((project, i) => ({
     node: (
-      <div className="project-card">
+      <div
+        className="project-card project-card--clickable"
+        onClick={() => { if (isDesktop()) setSelectedIndex(i); }}
+      >
         <div className="project-media">
           <img src={projectImages[i]} alt={project.title} />
           <div className="project-media-overlay"></div>
@@ -39,6 +46,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="project-link"
+                onClick={(e) => e.stopPropagation()}
               >
                 <FontAwesomeIcon icon={faGithub} />
                 <span>{t('projects.buttons.code')}</span>
@@ -50,6 +58,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="project-link primary"
+                onClick={(e) => e.stopPropagation()}
               >
                 <FontAwesomeIcon icon={faGlobe} />
                 <span>{t('projects.buttons.demo')}</span>
@@ -82,6 +91,14 @@ const Projects = () => {
         fadeOutColor="#0f0f23"
         ariaLabel="Projects"
       />
+
+      {selectedIndex !== null && (
+        <ProjectModal
+          project={projects[selectedIndex]}
+          image={projectImages[selectedIndex]}
+          onClose={() => setSelectedIndex(null)}
+        />
+      )}
     </section>
   );
 };

@@ -70,6 +70,14 @@
           "JavaScript",
           "MariaDB"
         ],
+        "features": [
+          "Autenticación de usuarios y manejo de sesiones",
+          "Creación de posts con editor de texto enriquecido",
+          "Backend RESTful con Node.js y Express",
+          "Integración con MariaDB para almacenamiento persistente"
+        ],
+        "status": "Completado",
+        "timeline": "2023",
         "repo": "https://github.com/xtsebas/Blog",
         "demo": "https://663ab7948680e97bea0bbf34--ephemeral-dieffenbachia-a772c8.netlify.app/#/login"
       },
@@ -82,6 +90,14 @@
           "Jest",
           "React Testing Library"
         ],
+        "features": [
+          "Diseño responsivo para todos los tamaños de pantalla",
+          "Cobertura completa de pruebas unitarias con Jest",
+          "Soporte de entrada por teclado",
+          "Interfaz limpia y accesible"
+        ],
+        "status": "Completado",
+        "timeline": "2023",
         "repo": "https://github.com/xtsebas/calculator-testing",
         "demo": "https://calculatortesting74.netlify.app/"
       },
@@ -95,6 +111,14 @@
           "Swagger",
           "MariaDB"
         ],
+        "features": [
+          "Endpoints RESTful para operaciones CRUD completas",
+          "Documentación interactiva con Swagger UI",
+          "Despliegue en contenedor con Docker",
+          "MariaDB para gestión de datos relacionales"
+        ],
+        "status": "Completado",
+        "timeline": "2023",
         "repo": "https://github.com/xtsebas/Blog_anime"
       },
       {
@@ -104,12 +128,30 @@
           "Figma",
           "Diseño UX/UI"
         ],
+        "features": [
+          "Agendamiento de sesiones y reserva de espacios",
+          "Visualización de ocupación en tiempo real",
+          "Sistema de puntos para usuarios frecuentes",
+          "UX mobile-first con enfoque en accesibilidad"
+        ],
+        "status": "Prototipo",
+        "timeline": "2023",
         "demo": "https://www.figma.com/design/nPe4kJxMps3G8JhWo7oTrp/SmartYou?node-id=0-1&t=z2sFgJSrduTrrl0R-1"
       }
     ],
     "buttons": {
       "demo": "Ver Demo",
       "code": "Código Fuente"
+    },
+    "modal": {
+      "overview": "Descripción",
+      "keyFeatures": "Características",
+      "technologies": "Tecnologías",
+      "links": "Enlaces",
+      "status": "Estado",
+      "timeline": "Período",
+      "viewGithub": "Ver en GitHub",
+      "liveDemo": "Ver Demo"
     }
   },
   "skills": {
