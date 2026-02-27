@@ -59,7 +59,7 @@ const Sidebar = () => {
                 <FontAwesomeIcon icon={icon} />
               </span>
 
-              {/* Hover label — slides in from right to left */}
+              {/* Desktop hover label — slides in from right to left */}
               <AnimatePresence>
                 {hoveredKey === key && (
                   <motion.span
@@ -73,6 +73,11 @@ const Sidebar = () => {
                   </motion.span>
                 )}
               </AnimatePresence>
+
+              {/* Mobile always-visible label below icon */}
+              <span className="sidebar-mobile-label">
+                {t(`navbar.links.${key}`)}
+              </span>
             </button>
           );
         })}
