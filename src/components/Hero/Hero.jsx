@@ -8,28 +8,55 @@ import profileImage from '../../assets/profile.jpg';
 import RotatingText from '../RotatingText/RotatingText';
 
 const LANGS = [
-  'JavaScript', 'Python', 'Java', 'PHP',
-  'React', 'Node.js', 'Laravel', 'Next.js',
-  'PostgreSQL', 'MySQL', 'Git/GitHub', 'Docker',
-  'Linux', 'Vite',
+  'JavaScript', 'TypeScript', 'Python', 'Java', 'PHP',
+  'React', 'Next.js', 'Node.js', 'Express',
+  'Ruby on Rails', 'Laravel', 'Flask',
+  'PostgreSQL', 'MySQL', 'MongoDB', 'DynamoDB',
+  'Neo4j', 'Cassandra',
+  'AWS', 'EC2', 'S3', 'VPC',
+  'Vertex AI',
+  'LLMs', 'GPT', 'Gemini',
+  'RAG', 'Qdrant',
+  'AI Agents', 'Agentic Flows',
+  'Prompt Engineering',
+  'CopilotKit',
+  'n8n', 'Automation',
+  'REST APIs', 'Webhooks',
+  'CI/CD', 'GitHub Actions',
+  'Docker', 'Coolify',
+  'Web Scraping', 'Playwright', 'BeautifulSoup',
+  'TensorFlow', 'Keras',
+  'Data Extraction (PDF)',
+  'Git/GitHub', 'Linux', 'Vite'
 ];
 
-const LANG_POS = [
-  { top: '9%',    left: '3%'    },
-  { top: '25%',   left: '1%'    },
-  { top: '55%',   left: '2%'    },
-  { top: '75%',   left: '7%'    },
-  { bottom: '6%', left: '32%'   },
-  { bottom: '4%', left: '58%'   },
-  { top: '6%',    right: '3%'   },
-  { top: '28%',   right: '1%'   },
-  { top: '52%',   right: '2%'   },
-  { top: '74%',   right: '5%'   },
-  { bottom: '10%',right: '18%'  },
-  { top: '7%',    left: '44%'   },
-  { top: '14%',   right: '19%'  },
-  { top: '64%',   left: '42%'   },
-];
+const generateOrganicCirclePositions = (items) => {
+  const centerX = 50;
+  const centerY = 50;
+  const total = items.length;
+
+  const baseRadius = 38;     
+  const variance = 10;       
+
+  return items.map((_, index) => {
+    const angle = (index / total) * (2 * Math.PI);
+
+    const dynamicRadius =
+      baseRadius +
+      Math.sin(index * 1.7) * variance;
+
+    const x = centerX + dynamicRadius * Math.cos(angle);
+    const y = centerY + dynamicRadius * Math.sin(angle);
+
+    return {
+      left: `${x}%`,
+      top: `${y}%`,
+      transform: 'translate(-50%, -50%)'
+    };
+  });
+};
+
+const LANG_POS = generateOrganicCirclePositions(LANGS);
 
 const REVEAL_RADIUS = 220; // px — should roughly match the glow blob size
 
