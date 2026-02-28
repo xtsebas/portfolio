@@ -14,16 +14,16 @@
     "name": "Sebastián Huertas",
     "roleSuffix": "Engineer",
     "roleAlt": "Estudiante de CS",
-    "description": "Apasionado por construir aplicaciones web escalables y resolver problemas complejos con código limpio y eficiente.",
+    "description": "Ingeniero en Ciencias de la Computacion apasionado por construir sistemas de software escalables y soluciones inteligentes. Disfruto resolver problemas complejos mediante codigo limpio, eficiente y bien estructurado, aprendiendo continuamente y aplicando tecnologias modernas para desarrollar aplicaciones de alto impacto y listas para produccion.",
     "cta": "Ver Proyectos",
     "ctaContact": "Contáctame"
   },
   "about": {
     "title": "Sobre Mí",
-    "bio": "Soy estudiante de Ingeniería en Ciencias de la Computación en la Universidad del Valle de Guatemala, apasionado por el desarrollo full-stack y la ciberseguridad. Con experiencia práctica en múltiples stacks tecnológicos incluyendo React, Node.js, Laravel y más, disfruto construir soluciones que generen un impacto real.",
+    "bio": "Soy estudiante de ultimo año de Ingenieria en Ciencias de la Computacion en la Universidad del Valle de Guatemala, con experiencia practica en desarrollo de software y enfoque en aplicaciones web escalables e inteligencia artificial. He trabajado con tecnologias como React, TypeScript, Next.js, Ruby on Rails y bases de datos relacionales y no relacionales, participando en el desarrollo de soluciones full stack y sistemas basados en IA que generan impacto real.",
     "stats": [
       {
-        "value": "2+",
+        "value": "3+",
         "label": "Años de Experiencia"
       },
       {
@@ -39,20 +39,41 @@
   "timeline": {
     "title": "Experiencia & Educación",
     "items": [
-      {
-        "period": "2024 - Presente",
-        "role": "Desarrollador Web",
-        "company": "Fundación Pediátrica de Guatemala",
-        "description": "Desarrollé y mantuve el proyecto de anamnesis usando Laravel y PHP para programación frontend, backend y de APIs. Resolví problemas de frontend y adquirí conocimientos de administración de servidores Linux.",
-        "type": "work"
-      },
-      {
-        "period": "2021 - Presente",
-        "role": "Ing. en Ciencias de la Computación",
-        "company": "Universidad del Valle de Guatemala",
-        "description": "Promedio superior al 90%. Enfoque en Tecnología Web, Ingeniería de Software, Algoritmos, Bases de Datos y Ciberseguridad. Avanzando conocimientos en React, Node.js y gestión de bases de datos.",
-        "type": "education"
-      }
+        {
+          "period": "Jun 2025 - Presente",
+          "role": "Full Stack Developer especializado en AI",
+          "company": "DRR Innova",
+          "description": "Desarrollo aplicaciones web escalables utilizando Next.js y TypeScript, traduciendo diseños de Figma en interfaces listas para produccion. Implemento pipelines RAG integrando Qdrant y Gemini para mejorar la comprension contextual de agentes de IA. Diseño y orquesto agentes utilizando OpenRouter, GPT y Grok, optimizando automatizaciones con n8n y gestionando contenido estructurado con Strapi CMS.",
+          "type": "work"
+        },
+        {
+          "period": "Oct 2024 - Presente",
+          "role": "Web Developer",
+          "company": "Fantastech",
+          "description": "Desarrollo soluciones full stack con React, TypeScript y Ruby on Rails. Gestiono bases de datos MongoDB y MySQL asegurando rendimiento y consistencia. Integro pasarelas de pago con Recurrente y sistemas de verificacion de identidad con Didit. Contribui al desarrollo de una plataforma de matching laboral y modulos de inventario con escaneo de codigos de barras.",
+          "type": "work"
+        },
+        {
+          "period": "2024 ",
+          "role": "Desarrollador Web",
+          "company": "Fundacion Pediatrica de Guatemala",
+          "description": "Desarrolle y mantuve el sistema de anamnesis utilizando Laravel y PHP para frontend, backend y APIs REST. Resolvi incidencias de interfaz y optimice flujos del sistema. Adquiri experiencia en administracion basica de servidores Linux y despliegue de aplicaciones.",
+          "type": "work"
+        },
+        {
+          "period": "Nov 2023 - May 2024",
+          "role": "Web Developer Junior",
+          "company": "TekNovate",
+          "description": "Desarrolle sistemas backend seguros utilizando Laravel y bases de datos relacionales. Implemente control de acceso basado en roles (RBAC) para formularios medicos. Mantuve paginas estaticas y resolvi problemas en produccion mejorando estabilidad y experiencia de usuario.",
+          "type": "work"
+        },
+        {
+          "period": "2022 - 2026",
+          "role": "Ingenieria en Ciencias de la Computacion",
+          "company": "Universidad del Valle de Guatemala",
+          "description": "Estudiante de ultimo ano con promedio superior al 90%. Enfoque en Ingenieria de Software, Algoritmos, Bases de Datos, Tecnologia Web e Inteligencia Artificial. Desarrollo de proyectos utilizando React, Node.js, TypeScript y arquitecturas modernas de software.",
+          "type": "education"
+        }
     ],
     "scrollHint": "desplaza para explorar"
   },
@@ -163,21 +184,40 @@
     "toolsTitle": "Herramientas y Tecnologías",
     "languages": [
       "JavaScript",
+      "TypeScript",
       "Python",
-      "Java",
       "PHP",
+      "Ruby",
       "React",
+      "Next.js",
       "Node.js",
+      "Express",
       "Laravel",
-      "Next.js"
+      "Ruby on Rails"
     ],
     "tools": [
+      "MongoDB",
       "PostgreSQL",
       "MySQL",
-      "Git/GitHub",
-      "Docker",
+      "RESTful APIs",
+      "Git",
+      "GitHub",
+      "AWS (EC2, S3, VPC, VPN, MFA)",
       "Linux",
-      "Vite"
+      "Docker",
+      "Strapi",
+      "n8n",
+      "Qdrant",
+      "Gemini",
+      "Vertex AI",
+      "LLM",
+      "RAG",
+      "OpenRouter",
+      "Figma",
+      "shadcn/ui",
+      "Recurrente",
+      "Didit Verification",
+      "SCRUM"
     ]
   },
   "contact": {

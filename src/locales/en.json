@@ -14,16 +14,16 @@
     "name": "Sebastián Huertas",
     "roleSuffix": "Engineer",
     "roleAlt": "CS Student",
-    "description": "Passionate about building scalable web applications and solving complex problems with clean, efficient code.",
+    "description": "Computer Science Engineer passionate about building scalable software systems and intelligent solutions. I enjoy solving complex problems through clean, efficient, and well-structured code, continuously learning and applying modern technologies to develop high-impact, production-ready applications.",
     "cta": "View Projects",
     "ctaContact": "Contact Me"
   },
   "about": {
     "title": "About Me",
-    "bio": "I'm a Computer Science Engineering student at Universidad del Valle de Guatemala, passionate about full-stack development and cybersecurity. With hands-on experience across multiple tech stacks including React, Node.js, Laravel, and more, I enjoy building solutions that make a real impact.",
+    "bio": "I am a final-year Computer Science Engineering student at Universidad del Valle de Guatemala with hands-on experience in software development and a strong focus on scalable web applications and artificial intelligence. I have worked with technologies such as React, TypeScript, Next.js, Ruby on Rails, and both relational and non-relational databases, contributing to full-stack solutions and AI-driven systems that create real-world impact.",
     "stats": [
       {
-        "value": "2+",
+        "value": "3+",
         "label": "Years Experience"
       },
       {
@@ -39,20 +39,41 @@
   "timeline": {
     "title": "Experience & Education",
     "items": [
-      {
-        "period": "2024 - Present",
-        "role": "Web Developer",
-        "company": "Pediatric Foundation of Guatemala",
-        "description": "Developed and maintained the anamnesis project using Laravel and PHP for frontend, backend, and API programming. Resolved frontend issues and gained basic Linux server management knowledge.",
-        "type": "work"
-      },
-      {
-        "period": "2021 - Present",
-        "role": "B.S. Computer Science Engineering",
-        "company": "Universidad del Valle de Guatemala",
-        "description": "GPA above 90%. Focus on Web Technology, Software Engineering, Algorithms, Databases, and Cybersecurity. Currently advancing knowledge in React, Node.js, and database management.",
-        "type": "education"
-      }
+        {
+          "period": "Jun 2025 - Present",
+          "role": "Full Stack Developer specialized in AI",
+          "company": "DRR Innova",
+          "description": "Develop scalable web applications using Next.js and TypeScript, translating Figma designs into production-ready interfaces. Implement RAG pipelines integrating Qdrant and Gemini to enhance AI agents' contextual understanding. Design and orchestrate AI agents using OpenRouter, GPT, and Grok, optimize workflows with n8n, and manage structured content through Strapi CMS.",
+          "type": "work"
+        },
+        {
+          "period": "Oct 2024 - Present",
+          "role": "Web Developer",
+          "company": "Fantastech",
+          "description": "Develop full-stack solutions using React, TypeScript, and Ruby on Rails. Manage MongoDB and MySQL databases ensuring performance and data consistency. Integrate secure payment gateways with Recurrente and identity verification systems with Didit. Contributed to the development of a job-matching platform and inventory management modules with barcode scanning.",
+          "type": "work"
+        },
+        {
+          "period": "2024 ",
+          "role": "Web Developer",
+          "company": "Fundación Pediátrica de Guatemala",
+          "description": "Developed and maintained a medical anamnesis system using Laravel and PHP for frontend, backend, and REST APIs. Resolved frontend issues and optimized system workflows. Gained hands-on experience in basic Linux server administration and application deployment.",
+          "type": "work"
+        },
+        {
+          "period": "Nov 2023 - May 2024",
+          "role": "Junior Web Developer",
+          "company": "TekNovate",
+          "description": "Developed secure backend systems using Laravel and relational databases. Implemented role-based access control (RBAC) for medical forms to ensure compliance and data security. Maintained static pages and resolved production issues, improving platform stability and user experience.",
+          "type": "work"
+        },
+        {
+          "period": "2022 - 2026",
+          "role": "B.S. in Computer Science Engineering",
+          "company": "Universidad del Valle de Guatemala",
+          "description": "Final-year student with a GPA above 90%. Focused on Software Engineering, Algorithms, Databases, Web Technologies, and Artificial Intelligence. Developed academic and practical projects using React, Node.js, TypeScript, and modern software architectures.",
+          "type": "education"
+        }
     ],
     "scrollHint": "scroll to explore"
   },
@@ -163,21 +184,40 @@
     "toolsTitle": "Tools & Technologies",
     "languages": [
       "JavaScript",
+      "TypeScript",
       "Python",
-      "Java",
       "PHP",
+      "Ruby",
       "React",
+      "Next.js",
       "Node.js",
+      "Express",
       "Laravel",
-      "Next.js"
+      "Ruby on Rails"
     ],
     "tools": [
+      "MongoDB",
       "PostgreSQL",
       "MySQL",
-      "Git/GitHub",
-      "Docker",
+      "RESTful APIs",
+      "Git",
+      "GitHub",
+      "AWS (EC2, S3, VPC, VPN, MFA)",
       "Linux",
-      "Vite"
+      "Docker",
+      "Strapi",
+      "n8n",
+      "Qdrant",
+      "Gemini",
+      "Vertex AI",
+      "LLM",
+      "RAG",
+      "OpenRouter",
+      "Figma",
+      "shadcn/ui",
+      "Recurrente",
+      "Didit Verification",
+      "SCRUM"
     ]
   },
   "contact": {
