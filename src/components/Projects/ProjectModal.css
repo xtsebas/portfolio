@@ -1,0 +1,236 @@
+/* ── Backdrop ── */
+.pm-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: pm-fade-in 0.2s ease;
+}
+
+@keyframes pm-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Modal card ── */
+.pm-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 860px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  animation: pm-slide-up 0.25s ease;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.pm-modal::-webkit-scrollbar { width: 6px; }
+.pm-modal::-webkit-scrollbar-track { background: transparent; }
+.pm-modal::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+@keyframes pm-slide-up {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+/* ── Header ── */
+.pm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.pm-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.pm-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+  flex-shrink: 0;
+}
+
+.pm-close:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-border);
+  background: var(--accent-light);
+}
+
+/* ── Media ── */
+.pm-media {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background: var(--bg-primary);
+  flex-shrink: 0;
+}
+
+.pm-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Content (two-column) ── */
+.pm-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  flex: 1;
+}
+
+.pm-left {
+  padding: 1.5rem;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pm-right {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Section ── */
+.pm-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pm-section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 0;
+}
+
+/* ── Overview text ── */
+.pm-overview {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Key features ── */
+.pm-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.pm-features li {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.pm-features li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.75rem;
+}
+
+/* ── Tech badges ── */
+.pm-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* ── Links ── */
+.pm-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.pm-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+}
+
+.pm-link:hover {
+  color: var(--accent);
+}
+
+.pm-link svg {
+  font-size: 0.85rem;
+}
+
+/* ── Status badge ── */
+.pm-status-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+
+/* ── Timeline text ── */
+.pm-timeline-text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* ── Responsive: single column on small screens ── */
+@media (max-width: 580px) {
+  .pm-content {
+    grid-template-columns: 1fr;
+  }
+
+  .pm-left {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pm-media {
+    height: 180px;
+  }
+}

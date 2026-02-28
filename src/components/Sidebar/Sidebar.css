@@ -1,0 +1,186 @@
+/* ── Sidebar shell ───────────────────────────────────────────── */
+.sidebar {
+  position: fixed;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* ── Nav group ───────────────────────────────────────────────── */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  background: rgba(15, 15, 35, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.45rem;
+}
+
+/* ── Item (button reset + layout) ───────────────────────────── */
+.sidebar-item {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: color 0.2s;
+  outline: none;
+}
+
+.sidebar-item:hover {
+  color: var(--text-primary);
+}
+
+.sidebar-item.active {
+  color: var(--accent);
+}
+
+/* ── Framer Motion animated background pill ──────────────────── */
+.sidebar-indicator {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  z-index: 0;
+}
+
+/* ── Icon (sits above indicator) ─────────────────────────────── */
+.sidebar-icon {
+  position: relative;
+  z-index: 1;
+  font-size: 0.85rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Hover label — appears to the left of the sidebar ────────── */
+.sidebar-label {
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  background: rgba(15, 15, 35, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.28rem 0.6rem;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Language toggle ─────────────────────────────────────────── */
+.sidebar-lang {
+  width: 38px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(15, 15, 35, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-lang:hover {
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+/* ── Mobile label (hidden on desktop) ───────────────────────── */
+.sidebar-mobile-label {
+  display: none;
+}
+
+/* ── Mobile: top navbar ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  .sidebar {
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: auto;
+    transform: none;
+    width: 100%;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .sidebar-nav {
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    padding: 0.4rem 0.25rem;
+    gap: 0;
+  }
+
+  .sidebar-item {
+    flex-direction: row;
+    width: auto;
+    height: 36px;
+    padding: 0 0.6rem;
+    border-radius: 8px;
+  }
+
+  .sidebar-icon {
+    font-size: 1rem;
+  }
+
+  /* Never show labels on mobile */
+  .sidebar-mobile-label {
+    display: none;
+  }
+
+  .sidebar-label {
+    display: none !important;
+  }
+
+  /* Language toggle at the right end */
+  .sidebar-lang {
+    align-self: center;
+    margin: 0 0.5rem;
+    height: 36px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    background: transparent;
+    padding: 0 0.75rem;
+    width: auto;
+  }
+}

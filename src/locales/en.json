@@ -1,0 +1,246 @@
+{
+  "navbar": {
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "experience": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Sebastián Huertas",
+    "roleSuffix": "Engineer",
+    "roleAlt": "CS Student",
+    "description": "Computer Science Engineer passionate about building scalable software systems and intelligent solutions. I enjoy solving complex problems through clean, efficient, and well-structured code, continuously learning and applying modern technologies to develop high-impact, production-ready applications.",
+    "cta": "View Projects",
+    "ctaContact": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "bio": "I am a final-year Computer Science Engineering student at Universidad del Valle de Guatemala with hands-on experience in software development and a strong focus on scalable web applications and artificial intelligence. I have worked with technologies such as React, TypeScript, Next.js, Ruby on Rails, and both relational and non-relational databases, contributing to full-stack solutions and AI-driven systems that create real-world impact.",
+    "stats": [
+      {
+        "value": "3+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "10+",
+        "label": "Projects Delivered"
+      },
+      {
+        "value": "90%",
+        "label": "GPA Score"
+      }
+    ]
+  },
+  "timeline": {
+    "title": "Experience & Education",
+    "items": [
+        {
+          "period": "Jun 2025 - Present",
+          "role": "Full Stack Developer specialized in AI",
+          "company": "DRR Innova",
+          "description": "Develop scalable web applications using Next.js and TypeScript, translating Figma designs into production-ready interfaces. Implement RAG pipelines integrating Qdrant and Gemini to enhance AI agents' contextual understanding. Design and orchestrate AI agents using OpenRouter, GPT, and Grok, optimize workflows with n8n, and manage structured content through Strapi CMS.",
+          "type": "work"
+        },
+        {
+          "period": "Oct 2024 - Present",
+          "role": "Web Developer",
+          "company": "Fantastech",
+          "description": "Develop full-stack solutions using React, TypeScript, and Ruby on Rails. Manage MongoDB and MySQL databases ensuring performance and data consistency. Integrate secure payment gateways with Recurrente and identity verification systems with Didit. Contributed to the development of a job-matching platform and inventory management modules with barcode scanning.",
+          "type": "work"
+        },
+        {
+          "period": "2024 ",
+          "role": "Web Developer",
+          "company": "Fundación Pediátrica de Guatemala",
+          "description": "Developed and maintained a medical anamnesis system using Laravel and PHP for frontend, backend, and REST APIs. Resolved frontend issues and optimized system workflows. Gained hands-on experience in basic Linux server administration and application deployment.",
+          "type": "work"
+        },
+        {
+          "period": "Nov 2023 - May 2024",
+          "role": "Junior Web Developer",
+          "company": "TekNovate",
+          "description": "Developed secure backend systems using Laravel and relational databases. Implemented role-based access control (RBAC) for medical forms to ensure compliance and data security. Maintained static pages and resolved production issues, improving platform stability and user experience.",
+          "type": "work"
+        },
+        {
+          "period": "2022 - 2026",
+          "role": "B.S. in Computer Science Engineering",
+          "company": "Universidad del Valle de Guatemala",
+          "description": "Final-year student with a GPA above 90%. Focused on Software Engineering, Algorithms, Databases, Web Technologies, and Artificial Intelligence. Developed academic and practical projects using React, Node.js, TypeScript, and modern software architectures.",
+          "type": "education"
+        }
+    ],
+    "scrollHint": "scroll to explore"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of projects I've built across web development, APIs, and design.",
+    "items": [
+      {
+        "title": "Blog Anime",
+        "description": "Full-stack blog built with React, Node.js, Vite, and JavaScript, featuring a robust API for seamless database connectivity.",
+        "tech": [
+          "React",
+          "Node.js",
+          "Vite",
+          "JavaScript",
+          "MariaDB"
+        ],
+        "features": [
+          "User authentication and session management",
+          "Anime post creation with rich text editor",
+          "RESTful API backend with Node.js and Express",
+          "MariaDB integration for persistent data storage"
+        ],
+        "status": "Completed",
+        "timeline": "2023",
+        "repo": "https://github.com/xtsebas/Blog",
+        "demo": "https://663ab7948680e97bea0bbf34--ephemeral-dieffenbachia-a772c8.netlify.app/#/login"
+      },
+      {
+        "title": "Calculator",
+        "description": "Next.js calculator app featuring responsive design and comprehensive unit testing for robust functionality.",
+        "tech": [
+          "Next.js",
+          "JavaScript",
+          "Jest",
+          "React Testing Library"
+        ],
+        "features": [
+          "Responsive design for all screen sizes",
+          "Full unit test coverage with Jest",
+          "Keyboard input support",
+          "Clean and accessible UI"
+        ],
+        "status": "Completed",
+        "timeline": "2023",
+        "repo": "https://github.com/xtsebas/calculator-testing",
+        "demo": "https://calculatortesting74.netlify.app/"
+      },
+      {
+        "title": "Api Blog Anime",
+        "description": "RESTful API built with Node.js, Express, Docker and Swagger, featuring robust database connectivity with MariaDB.",
+        "tech": [
+          "Node.js",
+          "Express",
+          "Docker",
+          "Swagger",
+          "MariaDB"
+        ],
+        "features": [
+          "RESTful endpoints for full CRUD operations",
+          "Interactive Swagger UI documentation",
+          "Containerized deployment with Docker",
+          "MariaDB for relational data management"
+        ],
+        "status": "Completed",
+        "timeline": "2023",
+        "repo": "https://github.com/xtsebas/Blog_anime"
+      },
+      {
+        "title": "SmartYou",
+        "description": "Figma prototype for a mobile app allowing SmartFit users to schedule gym sessions and avoid overcrowding, with a points reward system.",
+        "tech": [
+          "Figma",
+          "UX/UI Design"
+        ],
+        "features": [
+          "Gym session scheduling and slot reservation",
+          "Real-time occupancy visualization",
+          "Points reward system for frequent users",
+          "Mobile-first UX with accessibility focus"
+        ],
+        "status": "Prototype",
+        "timeline": "2023",
+        "demo": "https://www.figma.com/design/nPe4kJxMps3G8JhWo7oTrp/SmartYou?node-id=0-1&t=z2sFgJSrduTrrl0R-1"
+      }
+    ],
+    "buttons": {
+      "demo": "Live Demo",
+      "code": "Source Code"
+    },
+    "seeMore": "See All Projects",
+    "allTitle": "All Projects",
+    "back": "Back",
+    "modal": {
+      "overview": "Overview",
+      "keyFeatures": "Key Features",
+      "technologies": "Technologies",
+      "links": "Links",
+      "status": "Status",
+      "timeline": "Timeline",
+      "viewGithub": "View on GitHub",
+      "liveDemo": "Live Demo"
+    }
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "languagesTitle": "Languages & Frameworks",
+    "toolsTitle": "Tools & Technologies",
+    "languages": [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "PHP",
+      "Ruby",
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express",
+      "Laravel",
+      "Ruby on Rails"
+    ],
+    "tools": [
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL",
+      "RESTful APIs",
+      "Git",
+      "GitHub",
+      "AWS (EC2, S3, VPC, VPN, MFA)",
+      "Linux",
+      "Docker",
+      "Strapi",
+      "n8n",
+      "Qdrant",
+      "Gemini",
+      "Vertex AI",
+      "LLM",
+      "RAG",
+      "OpenRouter",
+      "Figma",
+      "shadcn/ui",
+      "Recurrente",
+      "Didit Verification",
+      "SCRUM"
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Feel free to reach out for collaborations, opportunities, or just to say hello!",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Your message here...",
+      "send": "Send Message",
+      "sending": "Sending…",
+      "successMsg": "Message sent! I'll get back to you soon.",
+      "errorMsg": "Something went wrong. Please try again."
+    },
+    "info": {
+      "title": "Let's Connect",
+      "email": "thiagohugo2018@gmail.com",
+      "phone": "+502 4574-6057",
+      "location": "Guatemala City, Guatemala",
+      "followTitle": "Follow Me"
+    }
+  }
+}
