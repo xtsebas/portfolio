@@ -109,6 +109,26 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(124, 58, 237, 0.5);
 }
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 0.85rem 1.85rem;
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+  font-weight: 600;
+  border: 1px solid var(--accent-border);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.38);
+}
 
 .btn-outline {
   display: inline-flex;
@@ -303,6 +323,7 @@
   }
 
   .btn-primary,
+  .btn-secondary,
   .btn-outline {
     width: 100%;
     justify-content: center;

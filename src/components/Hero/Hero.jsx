@@ -156,6 +156,9 @@ const Hero = () => {
             <button className="btn-primary" onClick={() => navigateTo(3)}>
               {t('hero.cta')} →
             </button>
+            <button className="btn-secondary" onClick={() => navigateTo(3)}>
+              {t('hero.cv')} ↓
+            </button>
             <button className="btn-outline" onClick={() => navigateTo(5)}>
               {t('hero.ctaContact')}
             </button>
