@@ -11,11 +11,16 @@ import './Projects.css';
 const isDesktop = () => window.matchMedia('(min-width: 1024px)').matches;
 
 import animeBlog from '../../assets/animeblog.gif';
-import calculator from '../../assets/calculator.gif';
-import apibloganime from '../../assets/apibloganime.png';
 import smartyou from '../../assets/smartyou.gif';
+import agentsgt from '../../assets/agents.gif';
+import convoai from '../../assets/convo.gif';
+import app from '../../assets/raices.gif';
+import therapistTrack from '../../assets/therapisttrack.png';
+import jackscave from '../../assets/jackscave.jpg';
+import uvgshop from '../../assets/uvgshop.png';
+import othelloAI from '../../assets/othello.png';
 
-const projectImages = [animeBlog, calculator, apibloganime, smartyou];
+const projectImages = [agentsgt, convoai, therapistTrack, jackscave,  othelloAI, animeBlog, smartyou, uvgshop, app];
 
 const Projects = () => {
   const { t } = useTranslation();

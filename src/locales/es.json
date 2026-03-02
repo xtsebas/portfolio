@@ -82,6 +82,115 @@
     "subtitle": "Una selección de proyectos que he construido en desarrollo web, APIs y diseño.",
     "items": [
       {
+        "title": "AgentsGT",
+        "description": "Plataforma web para la creacion, gestion y alquiler de agentes de inteligencia artificial personalizados. Contribui en mejoras de interfaz y en la integracion avanzada de herramientas de IA para potenciar la experiencia de usuario y las capacidades de los agentes.",
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "UX/UI Design",
+          "CopilotKit",
+          "Gemini",
+          "Integracion LLM",
+          "RAG",
+          "Gemini RAG"
+        ],
+        "features": [
+          "Rediseño y mejora del dashboard para optimizar usabilidad y claridad en los flujos",
+          "Integracion de herramientas de generacion e interpretacion de imagenes con Gemini directamente en el runtime de CopilotKit",
+          "Desarrollo de un editor de documentos que permite crear desde cero, editar en tiempo real o generar nuevos documentos a partir de uno existente",
+          "Implementacion de ampliacion de contexto mediante Gemini RAG para mejorar las respuestas de los agentes",
+          "Carga de archivos y uso dinamico como contexto dentro del runtime del agente a traves de Gemini RAG"
+        ],
+        "status": "Completado",
+        "timeline": "2026",
+        "demo": "https://agentsgt.com/"
+      },
+      {
+        "title": "ConvoFlow",
+        "description": "Plataforma web para la creacion y orquestacion de flujos de trabajo personalizables, permitiendo su integracion con servicios y APIs externas. Contribui en el desarrollo de la interfaz, herramientas de depuracion de nodos y mejoras en el runtime de ejecucion.",
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "UX/UI Design",
+          "Arquitectura de Workflows",
+          "Integracion de APIs",
+          "CopilotKit"
+        ],
+        "features": [
+          "Desarrollo y mejora de la interfaz para la creacion y gestion visual de nodos de flujo",
+          "Implementacion de herramientas de depuracion para rastrear la ejecucion y validar datos entre nodos",
+          "Habilitacion de ejecucion del runtime desde cualquier nodo con datos precargados",
+          "Diseño modular de flujos permitiendo integraciones flexibles con servicios externos",
+          "Optimización de la experiencia de usuario en procesos de automatizacion complejos"
+        ],
+        "status": "Completado",
+        "timeline": "2025",
+        "demo": "https://convoflow.ai/es/"
+      },
+      {
+        "title": "Therapist Track",
+        "description": "Aplicacion web desarrollada a medida para la gestion y administracion de documentos. Contribui en el desarrollo backend, diseño de arquitectura de base de datos y en la integracion de almacenamiento seguro de documentos.",
+        "tech": [
+          "Node.js",
+          "Arquitectura Monolitica",
+          "MongoDB",
+          "AWS S3",
+          "GitHub Actions",
+          "SCRUM"
+        ],
+        "features": [
+          "Diseño y estructuracion de colecciones en MongoDB utilizando referencias para garantizar escalabilidad e integridad de datos",
+          "Desarrollo de endpoints HTTP REST para la gestion completa del ciclo de vida de documentos",
+          "Implementacion de proteccion de endpoints mediante validacion de roles y analisis de seguridad",
+          "Integracion con AWS S3 para carga, descarga y almacenamiento persistente de documentos",
+          "Aplicacion de metodologia SCRUM para identificar requerimientos de seguridad y mejorar iterativamente el backend"
+        ],
+        "status": "Completado",
+        "timeline": "2024",
+        "repo": "https://github.com/TherapistTrack"
+      },  
+      {
+        "title": "Jacks Cave Backend",
+        "description": "Proyecto universitario backend para una plataforma tipo vlog enfocada en la carrera. Contribui en el modelado de contenido, estructura de APIs e integracion de servicios backend.",
+        "tech": [
+          "Strapi",
+          "Supabase",
+          "Node.js",
+          "REST APIs"
+        ],
+        "features": [
+          "Diseño e implementacion de content types y estructuras de modelos en Strapi a partir de tickets de desarrollo",
+          "Construccion y configuracion de endpoints REST para la gestion de contenido",
+          "Integracion del backend de Strapi con servicios de Supabase para manejo y persistencia de datos",
+          "Comprension profunda de arquitecturas CMS y estructuras tipo CRM",
+          "Trabajo colaborativo bajo metodologia agil para definicion y mejora continua de requerimientos backend"
+        ],
+        "status": "En Progreso",
+        "timeline": "2025",
+        "repo": "https://github.com/Jack-s-Cave"
+      },
+      {
+        "title": "Othello AI",
+        "description": "Proyecto universitario enfocado en el desarrollo de un agente inteligente capaz de jugar Othello utilizando algoritmos clasicos de inteligencia artificial y tecnicas de machine learning para mejorar la toma de decisiones a largo plazo.",
+        "tech": [
+          "Python",
+          "Minimax",
+          "Alpha-Beta Pruning",
+          "Flask",
+          "Machine Learning"
+        ],
+        "features": [
+          "Implementacion del algoritmo Minimax para la toma de decisiones estrategicas",
+          "Optimizacion del arbol de busqueda mediante Alpha-Beta Pruning para reducir la complejidad computacional",
+          "Diseño de funciones de evaluacion para analizar estados del tablero a largo plazo",
+          "Integracion de tecnicas de machine learning para permitir que el modelo mejore conforme juega mas partidas",
+          "Desarrollo de una interfaz con Flask para simulacion y pruebas del agente"
+        ],
+        "status": "Completado",
+        "timeline": "2025",
+        "repo": "https://github.com/wwIrvingww/othello_AI"
+      },
+      {
         "title": "Blog Anime",
         "description": "Blog full-stack construido con React, Node.js, Vite y JavaScript, con una API robusta para conectividad de base de datos.",
         "tech": [
@@ -103,46 +212,6 @@
         "demo": "https://663ab7948680e97bea0bbf34--ephemeral-dieffenbachia-a772c8.netlify.app/#/login"
       },
       {
-        "title": "Calculadora",
-        "description": "Aplicación calculadora en Next.js con diseño responsivo y pruebas unitarias completas para una funcionalidad robusta.",
-        "tech": [
-          "Next.js",
-          "JavaScript",
-          "Jest",
-          "React Testing Library"
-        ],
-        "features": [
-          "Diseño responsivo para todos los tamaños de pantalla",
-          "Cobertura completa de pruebas unitarias con Jest",
-          "Soporte de entrada por teclado",
-          "Interfaz limpia y accesible"
-        ],
-        "status": "Completado",
-        "timeline": "2023",
-        "repo": "https://github.com/xtsebas/calculator-testing",
-        "demo": "https://calculatortesting74.netlify.app/"
-      },
-      {
-        "title": "Api Blog Anime",
-        "description": "API RESTful construida con Node.js, Express, Docker y Swagger, con conectividad robusta a MariaDB.",
-        "tech": [
-          "Node.js",
-          "Express",
-          "Docker",
-          "Swagger",
-          "MariaDB"
-        ],
-        "features": [
-          "Endpoints RESTful para operaciones CRUD completas",
-          "Documentación interactiva con Swagger UI",
-          "Despliegue en contenedor con Docker",
-          "MariaDB para gestión de datos relacionales"
-        ],
-        "status": "Completado",
-        "timeline": "2023",
-        "repo": "https://github.com/xtsebas/Blog_anime"
-      },
-      {
         "title": "SmartYou",
         "description": "Prototipo en Figma para una app móvil que permite a usuarios de SmartFit agendar espacio en el gimnasio y evitar la sobresaturación, con sistema de puntos.",
         "tech": [
@@ -158,6 +227,49 @@
         "status": "Prototipo",
         "timeline": "2023",
         "demo": "https://www.figma.com/design/nPe4kJxMps3G8JhWo7oTrp/SmartYou?node-id=0-1&t=z2sFgJSrduTrrl0R-1"
+      },
+      {
+        "title": "UVG Shop",
+        "description": "Primera aplicacion movil desarrollada como proyecto universitario. Plataforma tipo marketplace dirigida a la comunidad universitaria, aplicando principios de Design Thinking y desarrollo nativo en Android.",
+        "tech": [
+          "Kotlin",
+          "Android Studio",
+          "Firebase Authentication",
+          "Figma",
+          "Design Thinking"
+        ],
+        "features": [
+          "Implementacion de inicio de sesion con Google para autenticacion segura",
+          "Desarrollo de funcionalidad para creacion y publicacion de productos",
+          "Captura directa de imagenes utilizando la camara del dispositivo",
+          "Carga y almacenamiento de imagenes para publicaciones",
+          "Diseño de flujos de usuario y prototipos bajo metodologia Design Thinking"
+        ],
+        "status": "Completado",
+        "timeline": "2023",
+        "repo": "https://github.com/Gxrco/UVSHop"
+      },
+      {
+        "title": "Gubernamental App",
+        "description": "Aplicacion movil multiplataforma desarrollada con Flutter (iOS y Android) para la carga, procesamiento y extraccion automatizada de informacion de documentos, permitiendo la generacion de dashboards e informes para los usuarios.",
+        "tech": [
+          "Flutter",
+          "Dart",
+          "AgentsGT",
+          "Integracion LLM",
+          "Agentes de IA",
+          "Android Studio",
+          "iOS"
+        ],
+        "features": [
+          "Implementacion de sistema seguro para carga y gestion de documentos",
+          "Integracion de agentes de AgentsGT para procesamiento inteligente y extraccion automatica de informacion",
+          "Generacion de dashboards dinamicos e informes analiticos basados en los datos procesados",
+          "Diseño de interfaz multiplataforma garantizando consistencia en iOS y Android",
+          "Optimizacion del flujo de datos entre el frontend movil y servicios backend impulsados por IA"
+        ],
+        "status": "Completado",
+        "timeline": "2025"
       }
     ],
     "buttons": {

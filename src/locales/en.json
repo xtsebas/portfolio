@@ -82,6 +82,115 @@
     "subtitle": "A selection of projects I've built across web development, APIs, and design.",
     "items": [
       {
+        "title": "AgentsGT",
+        "description": "Web platform for creating, managing, and renting customized AI agents. Contributed to UI improvements and advanced AI feature integrations to enhance user experience and agent capabilities.",
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "UX/UI Design",
+          "CopilotKit",
+          "Gemini",
+          "LLM Integration",
+          "RAG",
+          "Gemini RAG"
+        ],
+        "features": [
+          "Redesigned and improved dashboard UI for better usability and workflow clarity",
+          "Integrated Gemini-powered image generation and interpretation tools directly into the CopilotKit runtime",
+          "Built a full document editor allowing users to create documents from scratch, edit in real time, or generate new documents based on existing ones",
+          "Implemented context expansion using Gemini RAG for enhanced agent responses",
+          "Enabled file uploads and dynamic context injection into the agent runtime using Gemini RAG"
+        ],
+        "status": "Completed",
+        "timeline": "2026",
+        "demo": "https://agentsgt.com/"
+      },
+      {
+        "title": "ConvoFlow",
+        "description": "Web platform for designing and orchestrating customizable workflows that connect with external services and APIs. Contributed to UI development, node debugging features, and runtime execution improvements.",
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "UX/UI Design",
+          "Workflow Architecture",
+          "API Integrations",
+          "CopilotKit"
+        ],
+        "features": [
+          "Developed and improved the user interface for creating and managing visual workflow nodes",
+          "Implemented node debugging tools to trace execution flow and validate data between steps",
+          "Enabled runtime execution accessible from any node with preloaded contextual data",
+          "Designed modular workflow structures allowing seamless integration with external services",
+          "Improved usability and interaction for complex multi-step automation processes"
+        ],
+        "status": "Completed",
+        "timeline": "2025",
+        "demo": "https://convoflow.ai/es/"
+      },
+      {
+        "title": "Therapist Track",
+        "description": "Custom-built web application for document management and administration. Contributed to backend development, database architecture design, and secure document storage integration.",
+        "tech": [
+          "Node.js",
+          "Monolithic Architecture",
+          "MongoDB",
+          "AWS S3",
+          "GitHub Actions",
+          "SCRUM"
+        ],
+        "features": [
+          "Designed and structured MongoDB collections with references to ensure scalability and data integrity",
+          "Developed secure RESTful HTTP endpoints for full document lifecycle management",
+          "Implemented endpoint protection strategies based on role validation and security analysis",
+          "Integrated AWS S3 for secure upload, download, and persistent document storage",
+          "Applied SCRUM methodology to identify security requirements and iterate on backend improvements"
+        ],
+        "status": "Completed",
+        "timeline": "2024",
+        "repo": "https://github.com/TherapistTrack"
+      },
+      {
+        "title": "Jacks Cave Backend",
+        "description": "University project backend for a career-focused vlog platform. Contributed to content modeling, API structure, and backend-service integration.",
+        "tech": [
+          "Strapi",
+          "Supabase",
+          "Node.js",
+          "REST APIs"
+        ],
+        "features": [
+          "Designed and implemented content types and model structures in Strapi based on development tickets",
+          "Built and configured RESTful endpoints for content management",
+          "Connected Strapi backend with Supabase services for data handling and extended functionality",
+          "Improved understanding of CMS and CRM-style content architectures",
+          "Collaborated in an agile environment to iteratively define and refine backend requirements"
+        ],
+        "status": "In Progress",
+        "timeline": "2025",
+        "repo": "https://github.com/Jack-s-Cave"
+      },
+      {
+        "title": "Othello AI",
+        "description": "University project focused on developing an intelligent Othello-playing agent using classical AI algorithms and machine learning techniques to improve long-term decision making.",
+        "tech": [
+          "Python",
+          "Minimax Algorithm",
+          "Alpha-Beta Pruning",
+          "Flask",
+          "Machine Learning"
+        ],
+        "features": [
+          "Implemented the Minimax algorithm for strategic decision-making",
+          "Optimized search performance using Alpha-Beta Pruning to reduce computational complexity",
+          "Designed evaluation functions to improve long-term board state assessment",
+          "Integrated machine learning techniques to allow the model to improve as it played more games",
+          "Developed a Flask-based interface to simulate and test gameplay interactions"
+        ],
+        "status": "Completed",
+        "timeline": "2025",
+        "repo": "https://github.com/wwIrvingww/othello_AI"
+      },
+      {
         "title": "Blog Anime",
         "description": "Full-stack blog built with React, Node.js, Vite, and JavaScript, featuring a robust API for seamless database connectivity.",
         "tech": [
@@ -103,46 +212,6 @@
         "demo": "https://663ab7948680e97bea0bbf34--ephemeral-dieffenbachia-a772c8.netlify.app/#/login"
       },
       {
-        "title": "Calculator",
-        "description": "Next.js calculator app featuring responsive design and comprehensive unit testing for robust functionality.",
-        "tech": [
-          "Next.js",
-          "JavaScript",
-          "Jest",
-          "React Testing Library"
-        ],
-        "features": [
-          "Responsive design for all screen sizes",
-          "Full unit test coverage with Jest",
-          "Keyboard input support",
-          "Clean and accessible UI"
-        ],
-        "status": "Completed",
-        "timeline": "2023",
-        "repo": "https://github.com/xtsebas/calculator-testing",
-        "demo": "https://calculatortesting74.netlify.app/"
-      },
-      {
-        "title": "Api Blog Anime",
-        "description": "RESTful API built with Node.js, Express, Docker and Swagger, featuring robust database connectivity with MariaDB.",
-        "tech": [
-          "Node.js",
-          "Express",
-          "Docker",
-          "Swagger",
-          "MariaDB"
-        ],
-        "features": [
-          "RESTful endpoints for full CRUD operations",
-          "Interactive Swagger UI documentation",
-          "Containerized deployment with Docker",
-          "MariaDB for relational data management"
-        ],
-        "status": "Completed",
-        "timeline": "2023",
-        "repo": "https://github.com/xtsebas/Blog_anime"
-      },
-      {
         "title": "SmartYou",
         "description": "Figma prototype for a mobile app allowing SmartFit users to schedule gym sessions and avoid overcrowding, with a points reward system.",
         "tech": [
@@ -158,6 +227,49 @@
         "status": "Prototype",
         "timeline": "2023",
         "demo": "https://www.figma.com/design/nPe4kJxMps3G8JhWo7oTrp/SmartYou?node-id=0-1&t=z2sFgJSrduTrrl0R-1"
+      },
+      {
+        "title": "UVG Shop",
+        "description": "First mobile application developed as a university project. Marketplace platform designed for the university community, applying Design Thinking principles and native Android development.",
+        "tech": [
+          "Kotlin",
+          "Android Studio",
+          "Firebase Authentication",
+          "Figma",
+          "Design Thinking"
+        ],
+        "features": [
+          "Implemented Google login authentication for secure user access",
+          "Developed product creation and listing functionality",
+          "Enabled direct photo capture from the device camera",
+          "Integrated image upload for product publishing",
+          "Designed user flows and interface prototypes using Design Thinking methodology"
+        ],
+        "status": "Completed",
+        "timeline": "2023",
+        "repo": "https://github.com/Gxrco/UVSHop"
+      },
+      {
+        "title": "Gubernamental App",
+        "description": "Cross-platform mobile application developed with Flutter (iOS and Android) for document upload, processing, and automated data extraction to generate user dashboards and analytical reports.",
+        "tech": [
+          "Flutter",
+          "Dart",
+          "AgentsGT",
+          "LLM Integration",
+          "AI Agents",
+          "Android Studio",
+          "iOS"
+        ],
+        "features": [
+          "Implemented secure document upload and management system",
+          "Integrated AI agents from AgentsGT for automated document processing and information extraction",
+          "Generated dynamic dashboards and analytical reports based on extracted data",
+          "Designed cross-platform UI ensuring consistency across iOS and Android",
+          "Optimized data flow between mobile frontend and AI-powered backend services"
+        ],
+        "status": "Completed",
+        "timeline": "2025"
       }
     ],
     "buttons": {
