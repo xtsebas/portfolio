@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .claude/
+
+.env
+.env.local
