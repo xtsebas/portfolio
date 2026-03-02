@@ -287,7 +287,9 @@
       "status": "Status",
       "timeline": "Timeline",
       "viewGithub": "View on GitHub",
-      "liveDemo": "Live Demo"
+      "liveDemo": "Live Demo",
+      "expandPreview": "View Full Preview",
+      "collapsePreview": "Exit Full Preview"
     }
   },
   "skills": {

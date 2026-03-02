@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faXmark, faGlobe, faExpand, faCompress } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import './ProjectModal.css';
 
 const ProjectModal = ({ project, image, onClose }) => {
   const { t } = useTranslation();
+  const [isPreviewFull, setIsPreviewFull] = useState(false);
 
   useEffect(() => {
     // Block all scroll from reaching FullPageScroll (wheel, touch, keyboard)
@@ -49,7 +50,7 @@ const ProjectModal = ({ project, image, onClose }) => {
 
   return ReactDOM.createPortal(
     <div className="pm-backdrop" onClick={onClose}>
-      <div className="pm-modal" onClick={(e) => e.stopPropagation()}>
+      <div className={`pm-modal ${isPreviewFull ? 'pm-modal--preview-full' : ''}`} onClick={(e) => e.stopPropagation()}>
         {/* Header */}
         <div className="pm-header">
           <h2 className="pm-title">{project.title}</h2>
@@ -59,7 +60,16 @@ const ProjectModal = ({ project, image, onClose }) => {
         </div>
 
         {/* Media */}
-        <div className="pm-media">
+        <div className={`pm-media ${isPreviewFull ? 'pm-media--full' : ''}`}>
+          <button
+            type="button"
+            className="pm-preview-toggle"
+            onClick={() => setIsPreviewFull((prev) => !prev)}
+            aria-label={isPreviewFull ? t('projects.modal.collapsePreview') : t('projects.modal.expandPreview')}
+          >
+            <FontAwesomeIcon icon={isPreviewFull ? faCompress : faExpand} />
+            <span>{isPreviewFull ? t('projects.modal.collapsePreview') : t('projects.modal.expandPreview')}</span>
+          </button>
           <img src={image} alt={project.title} />
         </div>
 
