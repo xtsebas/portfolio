@@ -60,12 +60,25 @@ const LANG_POS = generateOrganicCirclePositions(LANGS);
 
 const REVEAL_RADIUS = 220; // px — should roughly match the glow blob size
 
+const CV_LINKS = {
+  en: 'https://drive.google.com/uc?export=download&id=1prgxOhPDdQy1-IlUfJkwEyVajY6NfOWZ',
+  es: 'https://drive.google.com/uc?export=download&id=10mazrNREw4bV9Cx5Pyod7f5L4ksTYOHV',
+};
+
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { navigateTo } = useNavigation();
 
   const heroRef  = useRef(null);
   const chipRefs = useRef([]);
+
+  const downloadCV = () => {
+    const lang = i18n.language?.startsWith('es') ? 'es' : 'en';
+    const link = document.createElement('a');
+    link.href = CV_LINKS[lang];
+    link.download = `cv_sebastian_huertas_${lang}.pdf`;
+    link.click();
+  };
 
   // Track pointer and reveal chips based on distance to glow
   useEffect(() => {
@@ -156,7 +169,7 @@ const Hero = () => {
             <button className="btn-primary" onClick={() => navigateTo(3)}>
               {t('hero.cta')} →
             </button>
-            <button className="btn-secondary" onClick={() => navigateTo(3)}>
+            <button className="btn-secondary" onClick={downloadCV}>
               {t('hero.cv')} ↓
             </button>
             <button className="btn-outline" onClick={() => navigateTo(5)}>
