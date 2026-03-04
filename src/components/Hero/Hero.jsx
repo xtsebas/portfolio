@@ -61,8 +61,8 @@ const LANG_POS = generateOrganicCirclePositions(LANGS);
 const REVEAL_RADIUS = 220; // px — should roughly match the glow blob size
 
 const CV_LINKS = {
-  en: 'https://drive.google.com/file/d/1_r7ue0u9pi3yl0YlwsOmzt9370SUAS3C/view?usp=sharing',
-  es: 'https://drive.google.com/file/d/1EV-2RKXdzAZyPbFM6k2qO3YDhv9F_d6k/view?usp=sharing',
+  en: 'https://drive.google.com/uc?export=download&id=1_r7ue0u9pi3yl0YlwsOmzt9370SUAS3C',
+  es: 'https://drive.google.com/uc?export=download&id=1EV-2RKXdzAZyPbFM6k2qO3YDhv9F_d6k',
 };
 
 const Hero = () => {
@@ -208,4 +208,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
 
